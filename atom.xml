@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-26T13:47:59.000Z</updated>
+  <updated>2017-05-27T02:25:09.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,26 +20,19 @@
     <link href="http://yoursite.com/2017/05/26/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E7%BB%8F/"/>
     <id>http://yoursite.com/2017/05/26/从零开始之前端开发面试经/</id>
     <published>2017-05-26T13:42:22.000Z</published>
-    <updated>2017-05-26T13:47:59.000Z</updated>
+    <updated>2017-05-27T02:25:09.000Z</updated>
     
-    <content type="html"><![CDATA[<p>先上废话：</p>
-<blockquote>
+    <content type="html"><![CDATA[<h4 id="先上废话："><a href="#先上废话：" class="headerlink" title="先上废话："></a>先上废话：</h4><blockquote>
 <p>员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——<em>马云爸爸</em></p>
 </blockquote>
 <hr>
-<p>前言</p>
-<p>2016年5月，怀着不可告人的目的进入公司时，就做好了一年后离职的打算。过去一年为了那个目的浪费了不少精力，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断（事实上依然断断续续拖延了3个月，手动捂脸），为自己过去一年的作为画上句号，并开始一段新的征程。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>2016年5月，怀着不可告人的目的进入公司时，就做好了一年后离职的打算。过去一年为了那个目的浪费了不少精力，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断（事实上依然断断续续拖延了3个月，手动捂脸），为自己过去一年的作为画上句号，并开始一段新的征程。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;先上废话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——&lt;em&gt;马云爸爸&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;前言&lt;/p&gt;
-&lt;p&gt;2016年5月，怀着不可告人的目的进入公司时，就做好了一年
+      &lt;h4 id=&quot;先上废话：&quot;&gt;&lt;a href=&quot;#先上废话：&quot; class=&quot;headerlink&quot; title=&quot;先上废话：&quot;&gt;&lt;/a&gt;先上废话：&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——&lt;em&gt;马云爸爸&lt;/em&gt;
     
     </summary>
     
