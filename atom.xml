@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-30T06:14:46.695Z</updated>
+  <updated>2017-11-30T06:26:58.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
     <id>http://yoursite.com/2017/11/30/online-problem-logs/</id>
     <published>2017-11-30T03:50:30.000Z</published>
-    <updated>2017-11-30T06:14:46.695Z</updated>
+    <updated>2017-11-30T06:26:58.107Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><blockquote>
 <p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
@@ -39,6 +39,10 @@
     
     </summary>
     
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
