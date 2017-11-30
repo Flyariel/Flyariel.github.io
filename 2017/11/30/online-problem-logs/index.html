@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="面试经," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -90,17 +90,19 @@
 
 
 
-<meta name="description" content="先上废话 员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——马云爸爸   前言说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(^__^) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(">
-<meta name="keywords" content="面试经">
+<meta name="description" content="线上问题日志定位手段##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始之前端开发面试经">
-<meta property="og:url" content="http://yoursite.com/2017/05/26/从零开始之前端开发面试经/index.html">
+<meta property="og:title" content="Ariel&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/2017/11/30/online-problem-logs/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="先上废话 员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——马云爸爸   前言说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(^__^) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(">
-<meta property="og:updated_time" content="2017-05-27T06:19:54.000Z">
+<meta property="og:description" content="线上问题日志定位手段##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以in">
+<meta property="og:image" content="http://yoursite.com/2017/11/30/online-problem-logs/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
+<meta property="og:image" content="http://yoursite.com/2017/11/30/online-problem-logs/597F5260-EC82-45A5-A829-A503666EBDCC.png">
+<meta property="og:updated_time" content="2017-11-30T03:36:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始之前端开发面试经">
-<meta name="twitter:description" content="先上废话 员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——马云爸爸   前言说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(^__^) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(">
+<meta name="twitter:title" content="Ariel&#39;s Blog">
+<meta name="twitter:description" content="线上问题日志定位手段##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以in">
+<meta name="twitter:image" content="http://yoursite.com/2017/11/30/online-problem-logs/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
 
 
 
@@ -128,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/26/从零开始之前端开发面试经/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
 
 
 
 
 
-  <title>从零开始之前端开发面试经 | Ariel's Blog</title>
+  <title> | Ariel's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -318,7 +320,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/26/从零开始之前端开发面试经/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/online-problem-logs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -335,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">从零开始之前端开发面试经</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -347,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-26T21:42:22+08:00">
-                2017-05-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T11:36:18+08:00">
+                2017-11-30
               </time>
             
 
@@ -366,7 +368,7 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a class="cloud-tie-join-count" href="/2017/05/26/从零开始之前端开发面试经/#comments" itemprop="discussionUrl">
+                <a class="cloud-tie-join-count" href="/2017/11/30/online-problem-logs/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count join-count" itemprop="commentCount"></span>
                 </a>
               </span>
@@ -375,7 +377,7 @@
 
           
           
-             <span id="/2017/05/26/从零开始之前端开发面试经/" class="leancloud_visitors" data-flag-title="从零开始之前端开发面试经">
+             <span id="/2017/11/30/online-problem-logs/" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -434,14 +436,14 @@
       
 
       
-        <h2 id="先上废话"><a href="#先上废话" class="headerlink" title="先上废话"></a>先上废话</h2><blockquote>
-<p>员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——<em>马云爸爸</em></p>
-</blockquote>
+        <h1 id="线上问题日志定位手段"><a href="#线上问题日志定位手段" class="headerlink" title="线上问题日志定位手段"></a><strong>线上问题日志定位手段</strong></h1><p>##一、背景</p>
 <hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(<em>^__^</em>) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(ㄒoㄒ)/~~）。</p>
-<a id="more"></a>
-<p>萌生离职想法之初，心里并无多少打算，在软通做外包的一年时间里，前端技能已荒废八九，Java技能树也只可怜的点亮了一二。想来这种情况想找上个好东家着实有些难度，但……总要去面对，且必须赶紧脱离现状，加快脚步讨回过去一年的代价。</p>
-<p>于是乎，在最后一次断掉所有退路之后，投入了找工作的大队中。</p>
+<p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
+<p>##二、日志监控</p>
+<hr>
+<p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><img src="./3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
+<p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="./597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
+<p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>
 
       
     </div>
@@ -489,12 +491,6 @@
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/面试经/" rel="tag"># 面试经</a>
-          
-        </div>
       
 
       
@@ -580,15 +576,6 @@
           
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
 
         </nav>
 
@@ -648,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#先上废话"><span class="nav-number">1.</span> <span class="nav-text">先上废话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.</span> <span class="nav-text">前言</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线上问题日志定位手段"><span class="nav-number">1.</span> <span class="nav-text">线上问题日志定位手段</span></a></li></ol></div>
             
 
           </div>

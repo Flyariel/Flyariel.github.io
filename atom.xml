@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-27T06:19:54.000Z</updated>
+  <updated>2017-11-30T03:36:18.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,34 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>从零开始之前端开发面试经</title>
-    <link href="http://yoursite.com/2017/05/26/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E7%BB%8F/"/>
-    <id>http://yoursite.com/2017/05/26/从零开始之前端开发面试经/</id>
-    <published>2017-05-26T13:42:22.000Z</published>
-    <updated>2017-05-27T06:19:54.000Z</updated>
+    <title></title>
+    <link href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
+    <id>http://yoursite.com/2017/11/30/online-problem-logs/</id>
+    <published>2017-11-30T03:36:18.000Z</published>
+    <updated>2017-11-30T03:36:18.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="先上废话"><a href="#先上废话" class="headerlink" title="先上废话"></a>先上废话</h2><blockquote>
-<p>员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——<em>马云爸爸</em></p>
-</blockquote>
+    <content type="html"><![CDATA[<h1 id="线上问题日志定位手段"><a href="#线上问题日志定位手段" class="headerlink" title="线上问题日志定位手段"></a><strong>线上问题日志定位手段</strong></h1><p>##一、背景</p>
 <hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(<em>^__^</em>) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(ㄒoㄒ)/~~）。</p>
-<a id="more"></a>
-<p>萌生离职想法之初，心里并无多少打算，在软通做外包的一年时间里，前端技能已荒废八九，Java技能树也只可怜的点亮了一二。想来这种情况想找上个好东家着实有些难度，但……总要去面对，且必须赶紧脱离现状，加快脚步讨回过去一年的代价。</p>
-<p>于是乎，在最后一次断掉所有退路之后，投入了找工作的大队中。</p>
+<p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
+<p>##二、日志监控</p>
+<hr>
+<p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><img src="./3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
+<p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="./597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
+<p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;先上废话&quot;&gt;&lt;a href=&quot;#先上废话&quot; class=&quot;headerlink&quot; title=&quot;先上废话&quot;&gt;&lt;/a&gt;先上废话&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;员工离职，原因不外乎两点：一是钱没给到位，二是心受了委屈。 ——&lt;em&gt;马云爸爸&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+      &lt;h1 id=&quot;线上问题日志定位手段&quot;&gt;&lt;a href=&quot;#线上问题日志定位手段&quot; class=&quot;headerlink&quot; title=&quot;线上问题日志定位手段&quot;&gt;&lt;/a&gt;&lt;strong&gt;线上问题日志定位手段&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;##一、背景&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;说来我自己都不信，当初打死都不接受进外包工作的人，2016年5月，为了一个奇怪的目的进入软通动力(&lt;em&gt;^__^&lt;/em&gt;) ……，心想达成目的之后抽身离开。but，坚持到后来反而越觉得希望渺茫，深知不可为，以至于17年开年后不得不下定决心做个了断，准备一刀斩断乱麻（虽然事实上整个过程断断续续拖延了3个月，🤦‍♀️ /(ㄒoㄒ)/~~）。&lt;/p&gt;
+&lt;p&gt;项目
     
     </summary>
     
-    
-      <category term="面试经" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F/"/>
     
   </entry>
   
