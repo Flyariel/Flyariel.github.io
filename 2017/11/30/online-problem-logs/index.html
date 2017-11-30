@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后">
+<meta name="description" content="一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后进入软件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线上问题日志定位手段">
 <meta property="og:url" content="http://yoursite.com/2017/11/30/online-problem-logs/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后">
+<meta property="og:description" content="一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后进入软件">
 <meta property="og:image" content="http://yoursite.com/2017/11/30/online-problem-logs/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
 <meta property="og:image" content="http://yoursite.com/2017/11/30/online-problem-logs/597F5260-EC82-45A5-A829-A503666EBDCC.png">
-<meta property="og:updated_time" content="2017-11-30T03:56:56.623Z">
+<meta property="og:updated_time" content="2017-11-30T05:35:34.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线上问题日志定位手段">
-<meta name="twitter:description" content="##一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 ##二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后">
+<meta name="twitter:description" content="一、背景  项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 二、日志监控  以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后进入软件">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/30/online-problem-logs/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
 
 
@@ -436,10 +436,10 @@
       
 
       
-        <p>##一、背景</p>
-<hr>
+        <h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><hr>
+<blockquote>
 <p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
-<p>##二、日志监控</p>
+<h2 id="二、日志监控"><a href="#二、日志监控" class="headerlink" title="二、日志监控"></a>二、日志监控</h2></blockquote>
 <hr>
 <p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><img src="./3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
 <p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="./597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
@@ -542,8 +542,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -616,6 +625,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、背景"><span class="nav-number">1.</span> <span class="nav-text">一、背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、日志监控"><span class="nav-number">2.</span> <span class="nav-text">二、日志监控</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
