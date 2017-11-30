@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-30T05:38:40.295Z</updated>
+  <updated>2017-11-30T05:42:01.526Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,23 +20,20 @@
     <link href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
     <id>http://yoursite.com/2017/11/30/online-problem-logs/</id>
     <published>2017-11-30T03:50:30.000Z</published>
-    <updated>2017-11-30T05:38:40.295Z</updated>
+    <updated>2017-11-30T05:42:01.526Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><hr>
-<blockquote>
+    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><blockquote>
 <p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
 </blockquote>
-<h2 id="二、日志监控"><a href="#二、日志监控" class="headerlink" title="二、日志监控"></a>二、日志监控</h2><hr>
-<p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><img src="./3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
+<h2 id="二、日志监控"><a href="#二、日志监控" class="headerlink" title="二、日志监控"></a>二、日志监控</h2><p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><img src="./3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
 <p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="./597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
 <p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h2&gt;&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;p&gt;项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得
+      &lt;h2 id=&quot;一、背景&quot;&gt;&lt;a href=&quot;#一、背景&quot; class=&quot;headerlink&quot; title=&quot;一、背景&quot;&gt;&lt;/a&gt;一、背景&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。
     
     </summary>
     
