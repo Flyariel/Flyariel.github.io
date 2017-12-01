@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MacOS 下配置Apache本地域名服务器]]></title>
+    <url>%2F2017%2F12%2F01%2FMacOS-%E4%B8%8B%E9%85%8D%E7%BD%AEApache%E6%9C%AC%E5%9C%B0%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件 开启Apache虚拟主机功能vi /etc/apache2/httpd.conf打开Apache配置文件，找到Include /private/etc/apache2/extra/httpd-vhosts.conf，放开注释，开启虚拟主机功能: vi /etc/apache2/extra/httpd-vhosts.conf配置虚拟主机： 启动Apache服务，域名访问项目sudo apachectl start，好了，现在可以通过域名访问项目资源了：]]></content>
+      <categories>
+        <category>服务器</category>
+      </categories>
+      <tags>
+        <tag>Apache</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[线上问题日志定位手段]]></title>
     <url>%2F2017%2F11%2F30%2Fonline-problem-logs%2F</url>
     <content type="text"><![CDATA[一、背景 项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一 二、日志监控以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径： 找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例： 然后进入软件系统进行相应操作，即可看见操作产生的对应日志了]]></content>

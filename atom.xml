@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ariel&#39;s Blog</title>
+  
   <subtitle>我想在那里最蓝的大海扬帆 , 绝不管自己能不能回还</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-30T06:30:07.153Z</updated>
+  <updated>2017-12-01T05:56:14.005Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,19 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MacOS 下配置Apache本地域名服务器</title>
+    <link href="http://yoursite.com/2017/12/01/MacOS-%E4%B8%8B%E9%85%8D%E7%BD%AEApache%E6%9C%AC%E5%9C%B0%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>http://yoursite.com/2017/12/01/MacOS-下配置Apache本地域名服务器/</id>
+    <published>2017-12-01T03:17:29.000Z</published>
+    <updated>2017-12-01T05:56:14.005Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="需求来源"><a href="#需求来源" class="headerlink" title="需求来源"></a>需求来源</h2><p>在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。</p><h2 id="实施过程"><a href="#实施过程" class="headerlink" title="实施过程"></a>实施过程</h2><h3 id="配置本地hosts"><a href="#配置本地hosts" class="headerlink" title="配置本地hosts"></a>配置本地hosts</h3><p><code>vi /etc/hosts</code>，配置自己预期的域名到hosts文件<br><img src="/images/hosts.png" alt="hosts"><br><a id="more"></a></p><h3 id="开启Apache虚拟主机功能"><a href="#开启Apache虚拟主机功能" class="headerlink" title="开启Apache虚拟主机功能"></a>开启Apache虚拟主机功能</h3><p><code>vi /etc/apache2/httpd.conf</code>打开Apache配置文件，找到<code>Include /private/etc/apache2/extra/httpd-vhosts.conf</code>，放开注释，开启虚拟主机功能:<br><img src="/images/openvirtual.png" alt="virtual"></p><p><code>vi /etc/apache2/extra/httpd-vhosts.conf</code>配置虚拟主机：</p><p><img src="/images/virtualhost.png" alt="virtualhost"></p><h3 id="启动Apache服务，域名访问项目"><a href="#启动Apache服务，域名访问项目" class="headerlink" title="启动Apache服务，域名访问项目"></a>启动Apache服务，域名访问项目</h3><p><code>sudo apachectl start</code>，好了，现在可以通过域名访问项目资源了：<br><img src="/images/load.png" alt="virtualhost"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;需求来源&quot;&gt;&lt;a href=&quot;#需求来源&quot; class=&quot;headerlink&quot; title=&quot;需求来源&quot;&gt;&lt;/a&gt;需求来源&lt;/h2&gt;&lt;p&gt;在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。&lt;/p&gt;
+&lt;h2 id=&quot;实施过程&quot;&gt;&lt;a href=&quot;#实施过程&quot; class=&quot;headerlink&quot; title=&quot;实施过程&quot;&gt;&lt;/a&gt;实施过程&lt;/h2&gt;&lt;h3 id=&quot;配置本地hosts&quot;&gt;&lt;a href=&quot;#配置本地hosts&quot; class=&quot;headerlink&quot; title=&quot;配置本地hosts&quot;&gt;&lt;/a&gt;配置本地hosts&lt;/h3&gt;&lt;p&gt;&lt;code&gt;vi /etc/hosts&lt;/code&gt;，配置自己预期的域名到hosts文件&lt;br&gt;&lt;img src=&quot;/images/hosts.png&quot; alt=&quot;hosts&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="服务器" scheme="http://yoursite.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+    
+      <category term="Apache" scheme="http://yoursite.com/tags/Apache/"/>
+    
+  </entry>
+  
+  <entry>
     <title>线上问题日志定位手段</title>
     <link href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
     <id>http://yoursite.com/2017/11/30/online-problem-logs/</id>
     <published>2017-11-30T03:50:30.000Z</published>
     <updated>2017-11-30T06:30:07.153Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><blockquote>
-<p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
-</blockquote>
-<h2 id="二、日志监控"><a href="#二、日志监控" class="headerlink" title="二、日志监控"></a>二、日志监控</h2><p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><a id="more"></a><br><img src="/images/3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
-<p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="/images/597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
-<p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>
-]]></content>
+    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><blockquote><p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p></blockquote><h2 id="二、日志监控"><a href="#二、日志监控" class="headerlink" title="二、日志监控"></a>二、日志监控</h2><p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><a id="more"></a><br><img src="/images/3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p><p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="/images/597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p><p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>]]></content>
     
     <summary type="html">
     
@@ -53,13 +71,7 @@
     <published>2017-11-29T16:00:00.000Z</published>
     <updated>2017-11-30T08:15:47.224Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/1.png" alt="问题样式"><br><a id="more"></a></p>
-<p>嗯，可以准备下手修改样式了！but……这个样式表在哪里啊？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了</p>
-<h2 id="二、机智的find命令"><a href="#二、机智的find命令" class="headerlink" title="二、机智的find命令"></a>二、机智的find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：<br>执行，good，找到了一大堆文件：<br><img src="/images/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p>
-<h2 id="三、小插曲"><a href="#三、小插曲" class="headerlink" title="三、小插曲"></a>三、小插曲</h2><blockquote>
-<p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux下查找文件/内容之find命令.md</strong>，然后<code>cat xx.md &gt; Linux下查找文件/内容之find命令.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p>
-</blockquote>
-]]></content>
+    <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/1.png" alt="问题样式"><br><a id="more"></a></p><p>嗯，可以准备下手修改样式了！but……这个样式表在哪里啊？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了</p><h2 id="二、机智的find命令"><a href="#二、机智的find命令" class="headerlink" title="二、机智的find命令"></a>二、机智的find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：<br>执行，good，找到了一大堆文件：<br><img src="/images/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p><h2 id="三、小插曲"><a href="#三、小插曲" class="headerlink" title="三、小插曲"></a>三、小插曲</h2><blockquote><p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux下查找文件/内容之find命令.md</strong>，然后<code>cat xx.md &gt; Linux下查找文件/内容之find命令.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p></blockquote>]]></content>
     
     <summary type="html">
     

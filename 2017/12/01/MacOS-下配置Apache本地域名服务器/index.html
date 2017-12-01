@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Apache," />
 
 
 
@@ -90,16 +90,23 @@
 
 
 
-<meta name="description" content="沉迷卡农无法自拔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ariel&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
+<meta name="keywords" content="Apache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS 下配置Apache本地域名服务器">
+<meta property="og:url" content="http://yoursite.com/2017/12/01/MacOS-下配置Apache本地域名服务器/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="沉迷卡农无法自拔">
+<meta property="og:description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/hosts.png">
+<meta property="og:image" content="http://yoursite.com/images/openvirtual.png">
+<meta property="og:image" content="http://yoursite.com/images/virtualhost.png">
+<meta property="og:image" content="http://yoursite.com/images/load.png">
+<meta property="og:updated_time" content="2017-12-01T05:56:14.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ariel&#39;s Blog">
-<meta name="twitter:description" content="沉迷卡农无法自拔">
+<meta name="twitter:title" content="MacOS 下配置Apache本地域名服务器">
+<meta name="twitter:description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
+<meta name="twitter:image" content="http://yoursite.com/images/hosts.png">
 
 
 
@@ -127,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/01/MacOS-下配置Apache本地域名服务器/"/>
 
 
 
 
 
-  <title>归档 | Ariel's Blog</title>
+  <title>MacOS 下配置Apache本地域名服务器 | Ariel's Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -169,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -307,140 +314,248 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 3 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/01/MacOS-下配置Apache本地域名服务器/" itemprop="url">
-              
-                <span itemprop="name">MacOS 下配置Apache本地域名服务器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-01T11:17:29+08:00"
-              content="2017-12-01" >
-          12-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/30/online-problem-logs/" itemprop="url">
-              
-                <span itemprop="name">线上问题日志定位手段</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-30T11:50:30+08:00"
-              content="2017-11-30" >
-          11-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/30/Linux/" itemprop="url">
-              
-                <span itemprop="name">Linux下查找包含指定内容的文件</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-30T00:00:00+08:00"
-              content="2017-11-30" >
-          11-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/MacOS-下配置Apache本地域名服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ariel">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ariel's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MacOS 下配置Apache本地域名服务器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T11:17:29+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/服务器/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a class="cloud-tie-join-count" href="/2017/12/01/MacOS-下配置Apache本地域名服务器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/12/01/MacOS-下配置Apache本地域名服务器/" class="leancloud_visitors" data-flag-title="MacOS 下配置Apache本地域名服务器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  179
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="需求来源"><a href="#需求来源" class="headerlink" title="需求来源"></a>需求来源</h2><p>在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。</p>
+<h2 id="实施过程"><a href="#实施过程" class="headerlink" title="实施过程"></a>实施过程</h2><h3 id="配置本地hosts"><a href="#配置本地hosts" class="headerlink" title="配置本地hosts"></a>配置本地hosts</h3><p><code>vi /etc/hosts</code>，配置自己预期的域名到hosts文件<br><img src="/images/hosts.png" alt="hosts"><br><a id="more"></a></p>
+<h3 id="开启Apache虚拟主机功能"><a href="#开启Apache虚拟主机功能" class="headerlink" title="开启Apache虚拟主机功能"></a>开启Apache虚拟主机功能</h3><p><code>vi /etc/apache2/httpd.conf</code>打开Apache配置文件，找到<code>Include /private/etc/apache2/extra/httpd-vhosts.conf</code>，放开注释，开启虚拟主机功能:<br><img src="/images/openvirtual.png" alt="virtual"></p>
+<p><code>vi /etc/apache2/extra/httpd-vhosts.conf</code>配置虚拟主机：</p>
+<p><img src="/images/virtualhost.png" alt="virtualhost"></p>
+<h3 id="启动Apache服务，域名访问项目"><a href="#启动Apache服务，域名访问项目" class="headerlink" title="启动Apache服务，域名访问项目"></a>启动Apache服务，域名访问项目</h3><p><code>sudo apachectl start</code>，好了，现在可以通过域名访问项目资源了：<br><img src="/images/load.png" alt="virtualhost"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>您的支持将鼓励我继续创作✧(≖ ◡ ≖✿)！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Ariel WeChat Pay"/>
+          <p></p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Ariel Alipay"/>
+          <p></p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/30/online-problem-logs/" rel="next" title="线上问题日志定位手段">
+                <i class="fa fa-chevron-left"></i> 线上问题日志定位手段
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -448,6 +563,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+  </div>
+
 
         </div>
         
@@ -467,8 +588,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -559,6 +689,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求来源"><span class="nav-number">1.</span> <span class="nav-text">需求来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实施过程"><span class="nav-number">2.</span> <span class="nav-text">实施过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置本地hosts"><span class="nav-number">2.1.</span> <span class="nav-text">配置本地hosts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Apache虚拟主机功能"><span class="nav-number">2.2.</span> <span class="nav-text">开启Apache虚拟主机功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动Apache服务，域名访问项目"><span class="nav-number">2.3.</span> <span class="nav-text">启动Apache服务，域名访问项目</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -701,11 +847,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
