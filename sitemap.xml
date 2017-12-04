@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/11/30/online-problem-logs/</loc>
+    
+    <lastmod>2017-12-04T10:41:38.391Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/11/30/Linux/</loc>
     
     <lastmod>2017-12-04T10:39:46.564Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2017/12/01/MacOS-%E4%B8%8B%E9%85%8D%E7%BD%AEApache%E6%9C%AC%E5%9C%B0%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     
     <lastmod>2017-12-01T05:56:14.005Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/11/30/online-problem-logs/</loc>
-    
-    <lastmod>2017-11-30T06:30:07.153Z</lastmod>
     
   </url>
   
