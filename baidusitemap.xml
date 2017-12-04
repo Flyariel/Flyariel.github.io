@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/30/Linux/</loc>
+    <lastmod>2017-12-04T10:39:46.564Z</lastmod>
+    <data>
+        <display>
+        <title>Linux下查找包含指定内容的文件</title>
+        <pubTime>2017-11-29T16:00:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/12/01/MacOS-%E4%B8%8B%E9%85%8D%E7%BD%AEApache%E6%9C%AC%E5%9C%B0%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2017-12-01T05:56:14.005Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="服务器" url="http://yoursite.com/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/30/Linux/</loc>
-    <lastmod>2017-11-30T08:15:47.224Z</lastmod>
-    <data>
-        <display>
-        <title>Linux下查找包含指定内容的文件</title>
-        <pubTime>2017-11-29T16:00:00.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
           
         </display>
     </data>

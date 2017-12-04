@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[Linux下查找包含指定内容的文件]]></title>
     <url>%2F2017%2F11%2F30%2FLinux%2F</url>
-    <content type="text"><![CDATA[一、背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图： 嗯，可以准备下手修改样式了！but……这个样式表在哪里啊？翻遍了文件夹都没找到对应的这个main.css啊！没关系，接下来该我们本文的主角出场了 二、机智的find命令以本人对Linux模糊的记忆，搜索到了强悍的find命令find .|xargs grep -ri &quot;xxx&quot;：执行，good，找到了一大堆文件：修改样式，上传，查看blog样式，perfect，手工！ 三、小插曲 为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用vim命令新建了该文章的文件Linux下查找文件/内容之find命令.md，然后cat xx.md &gt; Linux下查找文件/内容之find命令.md把xx文件的内容复制到了该文件]]></content>
+    <content type="text"><![CDATA[背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图： 嗯，可以准备下手修改样式了！but……这个样式表在哪里啊？翻遍了文件夹都没找到对应的这个main.css啊！没关系，接下来该我们本文的主角出场了 机智的find命令以本人对Linux模糊的记忆，搜索到了强悍的find命令find .|xargs grep -ri &quot;xxx&quot;：执行，good，找到了一大堆文件：修改样式，上传，查看blog样式，perfect，手工！ 小插曲 为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用vim命令新建了该文章的文件Linux下查找文件/内容之find命令.md，然后cat xx.md &gt; Linux下查找文件/内容之find命令.md把xx文件的内容复制到了该文件]]></content>
       <categories>
         <category>Linux</category>
       </categories>
