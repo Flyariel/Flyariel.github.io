@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="webpack," />
 
 
 
@@ -79,21 +79,20 @@
 
 
 
-<meta name="description" content="背景 项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一  日志监控以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：">
-<meta name="keywords" content="Linux">
+<meta name="description" content="问题描述今天webpack部署新接手的项目的时候，npm install --save-dev webpack 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线上问题日志定位手段">
-<meta property="og:url" content="http://yoursite.com/2017/11/30/online-problem-logs/index.html">
+<meta property="og:title" content="webpack.md">
+<meta property="og:url" content="http://yoursite.com/2017/12/05/webpack-md/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="背景 项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一  日志监控以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：">
+<meta property="og:description" content="问题描述今天webpack部署新接手的项目的时候，npm install --save-dev webpack 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
-<meta property="og:image" content="http://yoursite.com/images/597F5260-EC82-45A5-A829-A503666EBDCC.png">
-<meta property="og:updated_time" content="2017-12-04T10:41:38.391Z">
+<meta property="og:image" content="http://yoursite.com/images/webpack-error-1.png">
+<meta property="og:updated_time" content="2017-12-05T10:03:04.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线上问题日志定位手段">
-<meta name="twitter:description" content="背景 项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一  日志监控以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：">
-<meta name="twitter:image" content="http://yoursite.com/images/3C8B472A-E063-4838-9DCB-4A9E12B77391.png">
+<meta name="twitter:title" content="webpack.md">
+<meta name="twitter:description" content="问题描述今天webpack部署新接手的项目的时候，npm install --save-dev webpack 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
+<meta name="twitter:image" content="http://yoursite.com/images/webpack-error-1.png">
 
 
 
@@ -123,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/30/online-problem-logs/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/05/webpack-md/"/>
 
 
 
 
 
-  <title>线上问题日志定位手段 | Ariel's Blog</title>
+  <title>webpack.md | Ariel's Blog</title>
   
 
 
@@ -300,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/30/online-problem-logs/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/05/webpack-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -317,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">线上问题日志定位手段</h1>
+          <h1 class="post-title" itemprop="name headline">webpack.md</h1>
         
 
         <div class="post-meta">
@@ -329,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-30T11:50:30+08:00">
-                2017-11-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-05T17:39:11+08:00">
+                2017-12-05
               </time>
             
 
@@ -352,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/webpack/" itemprop="url" rel="index">
+                    <span itemprop="name">webpack</span>
                   </a>
                 </span>
 
@@ -369,7 +368,7 @@
 
           
           
-             <span id="/2017/11/30/online-problem-logs/" class="leancloud_visitors" data-flag-title="线上问题日志定位手段">
+             <span id="/2017/12/05/webpack-md/" class="leancloud_visitors" data-flag-title="webpack.md">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -400,12 +399,11 @@
       
 
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
-<p>项目在上线上环境之后，由于项目部署在服务器上，发生问题时本地无法debug，因此日志变得尤为重要。监控线上日志也成为线上问题定位的有效手段之一</p>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>今天webpack部署新接手的项目的时候，<code>npm install --save-dev webpack</code> 好像加载不了<code>package.json</code>里面指定的依赖包！<br><img src="/images/webpack-error-1.png" alt="问题样式"><br>以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……<br><a id="more"></a></p>
+<h2 id="暂时解决方案"><a href="#暂时解决方案" class="headerlink" title="暂时解决方案"></a>暂时解决方案</h2><p>从其他同事处拷贝了安装好的依赖包，放到项目代码中<br>依然有问题，because……同事的操作系统是Windows，所以拷贝之后，依然有些包不能用，根据报错提示命令执行，终于解决：</p>
+<blockquote>
+<p>暂时留坑在这里，等调试完项目之后再来回顾该问题 /(ㄒoㄒ)/~~</p>
 </blockquote>
-<h2 id="日志监控"><a href="#日志监控" class="headerlink" title="日志监控"></a>日志监控</h2><p>以Linux系统下的项目部署为例，首先进入项目线上部署服务器，找到项目路径以及日志文件生成路径：<br><a id="more"></a><br><img src="/images/3C8B472A-E063-4838-9DCB-4A9E12B77391.png" alt="Alt text"></p>
-<p>找到日志之后，就可以对指定级别的日志文件进行实时监控啦。一般发生问题时该监控error日志，本文以info日志为例：<br><img src="/images/597F5260-EC82-45A5-A829-A503666EBDCC.png" alt="Alt text"></p>
-<p>然后进入软件系统进行相应操作，即可看见操作产生的对应日志了</p>
 
       
     </div>
@@ -423,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
         </div>
       
@@ -436,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/30/Linux/" rel="next" title="Linux下查找包含指定内容的文件">
-                <i class="fa fa-chevron-left"></i> Linux下查找包含指定内容的文件
+              <a href="/2017/12/01/MacOS-下配置Apache本地域名服务器/" rel="next" title="MacOS 下配置Apache本地域名服务器">
+                <i class="fa fa-chevron-left"></i> MacOS 下配置Apache本地域名服务器
               </a>
             
           </div>
@@ -445,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/01/MacOS-下配置Apache本地域名服务器/" rel="prev" title="MacOS 下配置Apache本地域名服务器">
-                MacOS 下配置Apache本地域名服务器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -611,7 +605,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日志监控"><span class="nav-number">2.</span> <span class="nav-text">日志监控</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#暂时解决方案"><span class="nav-number">2.</span> <span class="nav-text">暂时解决方案</span></a></li></ol></div>
             
 
           </div>
