@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[webpack.md]]></title>
+    <title><![CDATA[webpack部署过程中遇到的问题]]></title>
     <url>%2F2017%2F12%2F05%2Fwebpack-md%2F</url>
     <content type="text"><![CDATA[问题描述今天webpack部署新接手的项目的时候，npm install --save-dev webpack 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼…… 暂时解决方案从其他同事处拷贝了安装好的依赖包，放到项目代码中依然有问题，because……同事的操作系统是Windows，所以拷贝之后，依然有些包不能用，根据报错提示命令执行，终于解决： 暂时留坑在这里，等调试完项目之后再来回顾该问题 /(ㄒoㄒ)/~~]]></content>
       <categories>
