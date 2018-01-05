@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://yoursite.com/2018/01/04/%E5%9F%BA%E4%BA%8ENodeJs%E9%98%B2%E6%AD%A2csrf%E6%94%BB%E5%87%BB/</loc>
-    <lastmod>2018-01-04T15:23:53.061Z</lastmod>
+    <lastmod>2018-01-05T14:33:35.287Z</lastmod>
     <data>
         <display>
-        <title>基于NodeJs防止csrf攻击</title>
+        <title>基于NodeJs防御csrf攻击</title>
         <pubTime>2018-01-04T13:32:40.000Z</pubTime>
         
         <tag>Node</tag>
