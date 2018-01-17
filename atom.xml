@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-10T12:48:16.000Z</updated>
+  <updated>2018-01-17T14:21:26.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux学习笔记一：文件权限与目录配置</title>
+    <link href="http://yoursite.com/2018/01/17/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E4%B8%8E%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2018/01/17/Linux学习笔记一：文件权限与目录配置/</id>
+    <published>2018-01-17T13:37:47.000Z</published>
+    <updated>2018-01-17T14:21:26.107Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="u-start-–-gt-permission-deny-？老铁，肯定是权限不够-！"><a href="#u-start-–-gt-permission-deny-？老铁，肯定是权限不够-！" class="headerlink" title="u start –&gt; permission deny ？老铁，肯定是权限不够 ！"></a>u start –&gt; permission deny ？老铁，肯定是权限不够 ！</h2><p>虽然你<code>sudo u start</code>了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行以下<code>ls -l</code>（先别问为什么，我也不知道），看到以下结果：<br><img src="/images/LinuxFiles.png" alt="Linux文件属性">  </p><blockquote><p><code>ls</code>是list的意思，该命令显示文件的文件名与相关属性，参数<code>-l</code>表示以单列格式输出文件的相关信息。 </p></blockquote><a id="more"></a> <p>如图所示，解释一下上图7列数据的意思：</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;u-start-–-gt-permission-deny-？老铁，肯定是权限不够-！&quot;&gt;&lt;a href=&quot;#u-start-–-gt-permission-deny-？老铁，肯定是权限不够-！&quot; class=&quot;headerlink&quot; title=&quot;u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！&quot;&gt;&lt;/a&gt;u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！&lt;/h2&gt;&lt;p&gt;虽然你&lt;code&gt;sudo u start&lt;/code&gt;了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行以下&lt;code&gt;ls -l&lt;/code&gt;（先别问为什么，我也不知道），看到以下结果：&lt;br&gt;&lt;img src=&quot;/images/LinuxFiles.png&quot; alt=&quot;Linux文件属性&quot;&gt;  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;ls&lt;/code&gt;是list的意思，该命令显示文件的文件名与相关属性，参数&lt;code&gt;-l&lt;/code&gt;表示以单列格式输出文件的相关信息。 &lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS+图片简单实现五角星推荐指数</title>
