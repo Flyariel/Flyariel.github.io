@@ -88,7 +88,9 @@
 <meta property="og:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/LinuxFiles.png">
-<meta property="og:updated_time" content="2018-01-17T15:19:41.390Z">
+<meta property="og:image" content="http://yoursite.com/images/chgrp-1.png">
+<meta property="og:image" content="http://yoursite.com/images/chgrp-2.png">
+<meta property="og:updated_time" content="2018-01-17T16:29:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记一：文件权限与目录配置">
 <meta name="twitter:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
@@ -399,7 +401,7 @@
       
 
       
-        <h2 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h2><p>u start –&gt; permission deny ？老铁，肯定是权限不够 ！虽然你<code>sudo u start</code>了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下<code>ls -l</code>（先别问为什么，我也不知道），看到以下结果：<br><img src="/images/LinuxFiles.png" alt="Linux文件属性">  </p>
+        <h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><p>u start –&gt; permission deny ？老铁，肯定是权限不够 ！虽然你<code>sudo u start</code>了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下<code>ls -l</code>（先别问为什么，我也不知道），看到以下结果：<br><img src="/images/LinuxFiles.png" alt="Linux文件属性">  </p>
 <blockquote>
 <p><code>ls</code>是list的意思，该命令显示文件的文件名与相关属性，参数<code>-l</code>表示以单列格式输出文件的相关信息。 </p>
 </blockquote>
@@ -418,13 +420,21 @@
 <li>第二组：文件所属用户组的权限</li>
 <li>第三组：其他非本用户组对此文件的权限</li>
 </ul>
-<p><strong>第二列：表示有多少文件名连接到该节点（i-node）</strong><br>关于i-node的相关资料我们在后续学习过程中再探讨</p>
-<p><strong>第三列：代表该文件（目录）的“所有者账号”</strong>  </p>
+<p><strong>第二列：表示有多少文件名连接到该节点（i-node）</strong><br><strong>第三列：代表该文件（目录）的“所有者账号”</strong>  </p>
 <p><strong>第四列：代表该文件的所属用户组</strong><br>Linux系统下，用户账号会附属于一个或者多个用户组中。比如用户User1、User2、USer3均属于staff这个用户组，如上图所示“Creative Cloud Files”所属的用户组为staff，该文件的权限为<code>drwxrwxr-x</code>,则用户USer1、USer2、USer3对该文件都具有可读、可写、可执行的权限，但非staff用户组的其他用户对该文件只具备可读、可执行的权限</p>
-<p><strong>第五列：代表该文件的容量大小，默认单位为B</strong>  </p>
-<p><strong>第六列：代表该文件的创建日期或最近修改日期</strong>  </p>
-<p><strong>第七列：代表该文件的名称</strong>  </p>
-
+<p><strong>第五列：代表该文件的容量大小，默认单位为B</strong><br><strong>第六列：代表该文件的创建日期或最近修改日期</strong><br><strong>第七列：代表该文件的名称</strong>  </p>
+<h1 id="修改文件属性与权限"><a href="#修改文件属性与权限" class="headerlink" title="修改文件属性与权限"></a>修改文件属性与权限</h1><p>现在我们已经大概了解到了文件的属性与权限，那么如何修改一个文件的属性与权限呢？其实一个文件的属性与权限有很多，我们先了解几个常用于用户组、所有者、其他各种权限的修改命令：</p>
+<ul>
+<li>chgrp：改变文件所属用户组</li>
+<li>chown：改变文件所有者</li>
+<li>chmod：改变文件权限</li>
+</ul>
+<h2 id="改变所属用户组：chgrp（change-group）"><a href="#改变所属用户组：chgrp（change-group）" class="headerlink" title="改变所属用户组：chgrp（change group）"></a>改变所属用户组：chgrp（change group）</h2><ul>
+<li>要被改变的组名必须要在<code>/etc/group</code>文件内 存在才行，否则会执行失败</li>
+<li>命令格式为：chgrp [-R] dirname/filename，<code>-R</code>表示进行递归的持续更改，即连同子目录下的所有文件都更新为这个用户组  </li>
+</ul>
+<p><img src="/images/chgrp-1.png" alt="改变所属用户组"><br><img src="/images/chgrp-2.png" alt="改变所属用户组"></p>
+<h2 id="改变文件所有者：chown（change-owner）"><a href="#改变文件所有者：chown（change-owner）" class="headerlink" title="改变文件所有者：chown（change owner）"></a>改变文件所有者：chown（change owner）</h2>
       
     </div>
     
@@ -661,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件属性"><span class="nav-number">1.</span> <span class="nav-text">文件属性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件属性"><span class="nav-number">1.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文件属性与权限"><span class="nav-number">2.</span> <span class="nav-text">修改文件属性与权限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#改变所属用户组：chgrp（change-group）"><span class="nav-number">2.1.</span> <span class="nav-text">改变所属用户组：chgrp（change group）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变文件所有者：chown（change-owner）"><span class="nav-number">2.2.</span> <span class="nav-text">改变文件所有者：chown（change owner）</span></a></li></ol></li></ol></div>
             
 
           </div>
