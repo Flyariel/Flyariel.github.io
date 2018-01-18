@@ -95,7 +95,8 @@
 <meta property="og:image" content="http://yoursite.com/images/chmod-2.png">
 <meta property="og:image" content="http://yoursite.com/images/chmod-3.png">
 <meta property="og:image" content="http://yoursite.com/images/directory-1.png">
-<meta property="og:updated_time" content="2018-01-18T10:53:21.284Z">
+<meta property="og:image" content="http://yoursite.com/images/directoryTree-1.png">
+<meta property="og:updated_time" content="2018-01-18T14:14:42.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记一：文件权限与目录配置">
 <meta name="twitter:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
@@ -464,14 +465,38 @@
 <blockquote>
 <p>需要特别注意的是：<code>u=rwx,go=r</code>是连在一起的，中间没有任何空格符！</p>
 </blockquote>
-<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置的依据–FHS"><a href="#Linux目录配置的依据–FHS" class="headerlink" title="Linux目录配置的依据–FHS"></a>Linux目录配置的依据–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据<code>文件系统使用的频率以及是否允许文件系统使用者随意更改</code>而降目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/directory-1.png" alt="Linux目录配置"><br>这四个类型代表的意思：  </p>
+<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置标准–FHS"><a href="#Linux目录配置标准–FHS" class="headerlink" title="Linux目录配置标准–FHS"></a>Linux目录配置标准–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据“文件系统使用的频率以及是否允许文件系统使用者随意更改”而将目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/directory-1.png" alt="Linux目录配置"><br>上表中的目录是一些代表性的目录，这些目录代表的四个类型的意义如下：</p>
 <ul>
 <li>可分享的：可以分享给其他系统挂载使用（例如执行文件、用户的邮件数据等）</li>
 <li>不可分享的：个人机器上运行的装置文件或者与程序相关的socket文件（仅与自身机器有关）</li>
 <li>不变的：不会经常变动的数据（例如函式库、文件说明文件、主机服务配置文件等）</li>
 <li>可变动的：经常改变的数据（例如登录文件、一般用户可自行收受的新闻组等）  </li>
 </ul>
-<p>事实上</p>
+<p>事实上，FHS针对目录树结构仅定义出三层目录底下应该放置什么数据，分别是：</p>
+<ul>
+<li>/(root，根目录)：与开机系统有关</li>
+<li>/usr(unix software resource)：与软件安装/执行有关</li>
+<li>/var(variable)：与系统运作过程有关</li>
+</ul>
+<h2 id="目录树（directory-tree）"><a href="#目录树（directory-tree）" class="headerlink" title="目录树（directory tree）"></a>目录树（directory tree）</h2><p>因为所有文件和目录都是由根目录开始，再一个一个分支下来，有点像树枝状，因此将这种目录配置方式称为“目录树”。它的主要特征有：</p>
+<ul>
+<li>目录树的起点为根目录（/， root）</li>
+<li>每一个目录不止能使用本地段的文件系统，也可以使用网络上的文件系统。例如可以利用<code>Network File System（NFS）</code>服务器挂载特定目录</li>
+<li>每一个文件在此目录树种的文件名（包含完整路径）都是独一无二的</li>
+</ul>
+<p>如果将整个目录树以图示的方法来显示，并将较为重要的文件数据列出来的话，目录树架构图大概如图所示：<br><img src="/images/directoryTree-1.png" alt="Linux目录树"></p>
+<h2 id="绝对路径与相对路径"><a href="#绝对路径与相对路径" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h2><p>根据文件名写法的不同，可以将路径（path）定义为相对路径（relative）与绝对路径（absolute），这两种文件名/路径的写法依据如下：</p>
+<ul>
+<li>绝对路径：由根目录（/）开始写起，如 <code>/etc/hosts</code></li>
+<li>相对路径：相对于目前路径的文件名写法。只要不是<code>/</code>开头的写法都属于相对路径写法，如<code>../Guest/</code>  </li>
+</ul>
+<p>思考：如果你当前在<code>/home</code>目录下，想进入<code>/var/log</code>目录，指令可以怎么写呢？如上述，绝对路径以根目录开始，相对路径是以“当前所在路径的相对位置”来表示的，那么可以这样写：</p>
+<ul>
+<li>cd ../var/log</li>
+<li>cd /var/log</li>
+</ul>
+<p><code>./</code>代表当前目录，<code>../</code>代表上一层目录，使用<code>pwd</code>指令可以查看当前路径的绝对路径</p>
+<p>至此，相信大家对Linux的文件属性与目录结构已经有了初步的认识。感谢大家进来浏览了小菜鸟的文章，下一次，我将与大家一起学习Linux文件与目录管理的相关知识，敬请捧场。</p>
 
       
     </div>
@@ -709,7 +734,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件属性"><span class="nav-number">1.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文件属性与权限"><span class="nav-number">2.</span> <span class="nav-text">修改文件属性与权限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#改变所属用户组：chgrp（change-group）"><span class="nav-number">2.1.</span> <span class="nav-text">改变所属用户组：chgrp（change group）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变文件所有者：chown（change-owner）"><span class="nav-number">2.2.</span> <span class="nav-text">改变文件所有者：chown（change owner）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变文件权限：chmod（change-mode）"><span class="nav-number">2.3.</span> <span class="nav-text">改变文件权限：chmod（change mode）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux目录配置"><span class="nav-number">3.</span> <span class="nav-text">Linux目录配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux目录配置的依据–FHS"><span class="nav-number">3.1.</span> <span class="nav-text">Linux目录配置的依据–FHS</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件属性"><span class="nav-number">1.</span> <span class="nav-text">文件属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改文件属性与权限"><span class="nav-number">2.</span> <span class="nav-text">修改文件属性与权限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#改变所属用户组：chgrp（change-group）"><span class="nav-number">2.1.</span> <span class="nav-text">改变所属用户组：chgrp（change group）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变文件所有者：chown（change-owner）"><span class="nav-number">2.2.</span> <span class="nav-text">改变文件所有者：chown（change owner）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#改变文件权限：chmod（change-mode）"><span class="nav-number">2.3.</span> <span class="nav-text">改变文件权限：chmod（change mode）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux目录配置"><span class="nav-number">3.</span> <span class="nav-text">Linux目录配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux目录配置标准–FHS"><span class="nav-number">3.1.</span> <span class="nav-text">Linux目录配置标准–FHS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录树（directory-tree）"><span class="nav-number">3.2.</span> <span class="nav-text">目录树（directory tree）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝对路径与相对路径"><span class="nav-number">3.3.</span> <span class="nav-text">绝对路径与相对路径</span></a></li></ol></li></ol></div>
             
 
           </div>
