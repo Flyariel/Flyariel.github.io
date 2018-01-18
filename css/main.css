@@ -1324,9 +1324,6 @@ pre .javascript .function {
 .posts-expand .post-body h6:hover .header-anchor {
   visibility: visible;
 }
-.posts-expand .post-body ul li {
-  list-style: circle;
-}
 .posts-expand .post-body img {
   box-sizing: border-box;
   margin: auto;
@@ -1936,7 +1933,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e73b6a;
+  background: #ff9fc4;
 }
 .links-of-blogroll {
   font-size: 13px;

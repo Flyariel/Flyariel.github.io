@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/images/chmod-2.png">
 <meta property="og:image" content="http://yoursite.com/images/chmod-3.png">
 <meta property="og:image" content="http://yoursite.com/images/directory-1.png">
-<meta property="og:updated_time" content="2018-01-18T10:22:48.449Z">
+<meta property="og:updated_time" content="2018-01-18T10:53:21.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记一：文件权限与目录配置">
 <meta name="twitter:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
@@ -419,7 +419,7 @@
 <li>[b]：设备文件里面的可供存储的接口设备</li>
 <li>[c]：设备文件里面的串行端口设备，例如键盘、鼠标等  </li>
 </ul>
-<p>接下来的字符中，以3个为一组，且均为”rwx的3个参数的组合。<code>r</code>代表可读(read)，<code>w</code>代表可写(write)，<code>x</code>代表可执行(execute)，<strong>这3个权限的位置不会改变</strong>，如果没有权限，则显示为<code>“-”</code>：</p>
+<p>接下来的字符中，以3个为一组，且均为”rwx的3个参数的组合。<code>r</code>代表可读(read)，<code>w</code>代表可写(write)，<code>x</code>代表可执行(execute)，这3个权限的位置不会改变，如果没有权限，则显示为<code>“-”</code>：</p>
 <ul>
 <li>第一组：[文件拥有者可具备的权限]，以“Tomorrow.itermcolors”为例，该文件所有者可以读写，但不可执行</li>
 <li>第二组：[加入该用户组的账号对此文件的权限]</li>
@@ -464,7 +464,14 @@
 <blockquote>
 <p>需要特别注意的是：<code>u=rwx,go=r</code>是连在一起的，中间没有任何空格符！</p>
 </blockquote>
-<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置的依据–FHS"><a href="#Linux目录配置的依据–FHS" class="headerlink" title="Linux目录配置的依据–FHS"></a>Linux目录配置的依据–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据<code>文件系统使用的频率以及是否允许文件系统使用者随意更改</code>而降目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/directory-1.png" alt="Linux目录配置"></p>
+<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置的依据–FHS"><a href="#Linux目录配置的依据–FHS" class="headerlink" title="Linux目录配置的依据–FHS"></a>Linux目录配置的依据–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据<code>文件系统使用的频率以及是否允许文件系统使用者随意更改</code>而降目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/directory-1.png" alt="Linux目录配置"><br>这四个类型代表的意思：  </p>
+<ul>
+<li>可分享的：可以分享给其他系统挂载使用（例如执行文件、用户的邮件数据等）</li>
+<li>不可分享的：个人机器上运行的装置文件或者与程序相关的socket文件（仅与自身机器有关）</li>
+<li>不变的：不会经常变动的数据（例如函式库、文件说明文件、主机服务配置文件等）</li>
+<li>可变动的：经常改变的数据（例如登录文件、一般用户可自行收受的新闻组等）  </li>
+</ul>
+<p>事实上</p>
 
       
     </div>
