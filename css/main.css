@@ -1933,7 +1933,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa6a8;
+  background: #9df047;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2737,7 +2737,7 @@ embed {
     padding: 0;
     background: #fff;
     border-bottom: 1px solid #ddd;
-    z-index: 1050;
+    z-index: 1030;
   }
 }
 @media (max-width: 767px) {
