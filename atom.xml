@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-19T01:21:18.481Z</updated>
+  <updated>2018-02-08T08:39:20.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node实现文件系统操作：导出Excel</title>
+    <link href="http://yoursite.com/2018/02/08/node%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%EF%BC%9A%E5%AF%BC%E5%87%BAExcel/"/>
+    <id>http://yoursite.com/2018/02/08/node实现文件系统操作：导出Excel/</id>
+    <published>2018-02-08T08:38:34.000Z</published>
+    <updated>2018-02-08T08:39:20.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Node" scheme="http://yoursite.com/categories/Node/"/>
+    
+    
+      <category term="Node" scheme="http://yoursite.com/tags/Node/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux学习笔记一：文件权限与目录配置</title>
