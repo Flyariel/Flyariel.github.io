@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="沉迷卡农无法自拔">
+<meta name="description" content="依赖模块以及第三方包node中，文件 I/O 是对标准 POSIX 函数的简单封装，通过fs模块可实现对文件系统的操作；因为要操作报表，这里我们引入三方包node-xlsx API说明fs模块提供了fs.writeFile(file, data[, options], callback)和fs.writeFileSy">
 <meta name="keywords" content="Node">
 <meta property="og:type" content="article">
-<meta property="og:title" content="node实现文件系统操作：导出Excel">
-<meta property="og:url" content="http://yoursite.com/2018/02/08/node实现文件系统操作：导出Excel/index.html">
+<meta property="og:title" content="Node实现文件系统操作：导入导出Excel">
+<meta property="og:url" content="http://yoursite.com/2018/02/08/Node实现文件系统操作：导入导出Excel/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="沉迷卡农无法自拔">
+<meta property="og:description" content="依赖模块以及第三方包node中，文件 I/O 是对标准 POSIX 函数的简单封装，通过fs模块可实现对文件系统的操作；因为要操作报表，这里我们引入三方包node-xlsx API说明fs模块提供了fs.writeFile(file, data[, options], callback)和fs.writeFileSync(file, data[, options])两个api实现对文件的写入，由">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-08T08:39:20.000Z">
+<meta property="og:updated_time" content="2018-02-09T08:10:42.013Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node实现文件系统操作：导出Excel">
-<meta name="twitter:description" content="沉迷卡农无法自拔">
+<meta name="twitter:title" content="Node实现文件系统操作：导入导出Excel">
+<meta name="twitter:description" content="依赖模块以及第三方包node中，文件 I/O 是对标准 POSIX 函数的简单封装，通过fs模块可实现对文件系统的操作；因为要操作报表，这里我们引入三方包node-xlsx API说明fs模块提供了fs.writeFile(file, data[, options], callback)和fs.writeFileSync(file, data[, options])两个api实现对文件的写入，由">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/08/node实现文件系统操作：导出Excel/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/08/Node实现文件系统操作：导入导出Excel/"/>
 
 
 
 
 
-  <title>node实现文件系统操作：导出Excel | Ariel's Blog</title>
+  <title>Node实现文件系统操作：导入导出Excel | Ariel's Blog</title>
   
 
 
@@ -297,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/node实现文件系统操作：导出Excel/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/Node实现文件系统操作：导入导出Excel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">node实现文件系统操作：导出Excel</h1>
+          <h1 class="post-title" itemprop="name headline">Node实现文件系统操作：导入导出Excel</h1>
         
 
         <div class="post-meta">
@@ -366,7 +366,7 @@
 
           
           
-             <span id="/2018/02/08/node实现文件系统操作：导出Excel/" class="leancloud_visitors" data-flag-title="node实现文件系统操作：导出Excel">
+             <span id="/2018/02/08/Node实现文件系统操作：导入导出Excel/" class="leancloud_visitors" data-flag-title="Node实现文件系统操作：导入导出Excel">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -397,7 +397,19 @@
       
 
       
-        
+        <h1 id="依赖模块以及第三方包"><a href="#依赖模块以及第三方包" class="headerlink" title="依赖模块以及第三方包"></a>依赖模块以及第三方包</h1><p>node中，文件 I/O 是对标准 POSIX 函数的简单封装，通过<code>fs</code>模块可实现对文件系统的操作；因为要操作报表，这里我们引入三方包<code>node-xlsx</code></p>
+<h1 id="API说明"><a href="#API说明" class="headerlink" title="API说明"></a>API说明</h1><p><code>fs</code>模块提供了<code>fs.writeFile(file, data[, options], callback)</code>和<code>fs.writeFileSync(file, data[, options])</code>两个api实现对文件的写入，由方法名可知分别是异步和同步的实现</p>
+<p><strong>fs.writeFile(file, data[, options], callback)</strong></p>
+<ul>
+<li>file <code>&lt;string&gt;</code> | <code>&lt;Buffer&gt;</code> | <code>&lt;integer&gt;</code> 文件名或文件描述符</li>
+<li>data <code>&lt;string&gt;</code> | <code>&lt;Buffer&gt;</code> | <code>&lt;Uint8Array&gt;</code></li>
+<li>options <code>&lt;Object&gt;</code> | <code>&lt;string&gt;</code></li>
+<li>callback <code>&lt;Function&gt;</code></li>
+</ul>
+<p>异步地写入数据到文件，如果文件已经存在，则替代文件。 data 可以是一个字符串或一个 buffer。任何指定的文件描述符必须支持写入,多次对同一文件使用 fs.writeFile 且不等待回调，是不安全的。 对于这种情况，强烈推荐使用 fs.createWriteStream。fs.writeFileSync()为fs.writeFile() 的同步版本，返回 undefined。</p>
+<h1 id="需求实现"><a href="#需求实现" class="headerlink" title="需求实现"></a>需求实现</h1><p>简单了解了API之后，我们就可以实现写入文件数据的功能了，但要生成Excel文件，还需借助三方包<code>node-xlsx</code>。至于该三方包的详细API，请移步官方<a href="https://www.npmjs.com/package/node-xlsx" target="_blank" rel="noopener">xlsx</a>查看，下面看代码示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> AdvertisedPrice = <span class="built_in">require</span>(<span class="string">'./api/consultant-system/config/advertised-price'</span>);</span><br><span class="line"><span class="keyword">const</span> xlsx = <span class="built_in">require</span>(<span class="string">'node-xlsx'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//表格需要导出的内容</span></span><br><span class="line"><span class="keyword">const</span> excelHeaders = &#123;</span><br><span class="line">    detailHeader: [</span><br><span class="line">        <span class="string">'类目id'</span>, <span class="string">'类目名称'</span>, <span class="string">'类目价格'</span></span><br><span class="line">    ],</span><br><span class="line">    detailHeaderAlias: [</span><br><span class="line">        <span class="string">'key'</span>, <span class="string">'keyName'</span>, <span class="string">'value'</span></span><br><span class="line">    ],</span><br><span class="line">    detailHeaderWidth: &#123;</span><br><span class="line">        <span class="string">'!cols'</span>: [</span><br><span class="line">            &#123;<span class="attr">wch</span>: <span class="number">15</span>&#125;, &#123;<span class="attr">wch</span>: <span class="number">55</span>&#125;, &#123;<span class="attr">wch</span>: <span class="number">15</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 数据转换</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">transformData</span>(<span class="params">arr, excelHeader, excelHeaderAlias, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray(arr)) &#123;</span><br><span class="line">        res.send(<span class="string">'数据格式不对'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> finalArr = []</span><br><span class="line">    <span class="keyword">const</span> hAlias = excelHeaders[excelHeaderAlias]</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">curVal, index</span>) =&gt;</span> &#123;</span><br><span class="line">        finalArr[index] = []</span><br><span class="line">        hAlias.forEach(<span class="function"><span class="params">val</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (val === <span class="string">'key'</span>) &#123;</span><br><span class="line">                finalArr[index].push((curVal)[val].split(<span class="string">'.'</span>)[<span class="number">3</span>])</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                finalArr[index].push((curVal)[val])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    finalArr.unshift(excelHeaders[excelHeader])</span><br><span class="line">    <span class="keyword">return</span> finalArr</span><br><span class="line">&#125;</span><br><span class="line">UA.onGet(<span class="string">'/api/consultant/config/advertised-price/export'</span>, (req, res, next) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> qo = req.query</span><br><span class="line">    <span class="keyword">let</span> queryData = &#123;</span><br><span class="line">        groupName: qo.groupName,</span><br><span class="line">        originData: qo.originData || []</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">new</span> AdvertisedPrice(queryData).getAllAdvertisedPrice().then(<span class="function"><span class="params">rs</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> tempData = rs.data</span><br><span class="line">        <span class="keyword">if</span> (tempData) &#123;</span><br><span class="line">            <span class="keyword">const</span> data = transformData(tempData, qo.header, qo.headerAlias, res)</span><br><span class="line">            <span class="keyword">const</span> buffer = xlsx.build([&#123;<span class="attr">data</span>: data, <span class="attr">name</span>: qo.filename&#125;], excelHeaders[<span class="string">`<span class="subst">$&#123;qo.header&#125;</span>Width`</span>])</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                fs.writeFileSync(<span class="string">`<span class="subst">$&#123;qo.filename&#125;</span>.xlsx`</span>, buffer, <span class="string">'binary'</span>)</span><br><span class="line">                res.download(<span class="string">`<span class="subst">$&#123;qo.filename&#125;</span>.xlsx`</span>, err =&gt; &#123;</span><br><span class="line">                    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                        res.send(<span class="string">`download price excel failed---&gt;<span class="subst">$&#123;err.toString()&#125;</span>`</span>)</span><br><span class="line">                        next()</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        res.send(<span class="string">'download price excel successful'</span>)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">`download price excel failed---&gt;<span class="subst">$&#123;error.toString()&#125;</span>`</span>)</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                fs.unlink(<span class="string">`<span class="subst">$&#123;qo.filename&#125;</span>.xlsx`</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.send(&#123;<span class="attr">msg</span>: <span class="string">'download price excel failed: has no price config data'</span>&#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        res.send(&#123;<span class="attr">msg</span>: <span class="string">`download price excel failed---&gt;<span class="subst">$&#123;err&#125;</span>`</span>&#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h1 id="前端层请求"><a href="#前端层请求" class="headerlink" title="前端层请求"></a>前端层请求</h1><p>需要注意的是：因为文件是以流的形式传输，而ajax请求的返回值类型是json、text、HTML、xml等类型，所以ajax是无法实现文件下载的。但用ajax仍然可以获得文件的内容，该文件将被保留在内存中，无法将文件保存到磁盘。这是因为JavaScript无法和磁盘进行交互，否则这会是一个严重的安全问题，js无法调用到浏览器的下载处理机制和程序，会被浏览器阻塞。实现文件下载可以用<code>&lt;a&gt;</code>标签或者<code>location.href</code>实现</p>
+
       
     </div>
     
@@ -498,8 +510,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,6 +636,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#依赖模块以及第三方包"><span class="nav-number">1.</span> <span class="nav-text">依赖模块以及第三方包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API说明"><span class="nav-number">2.</span> <span class="nav-text">API说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求实现"><span class="nav-number">3.</span> <span class="nav-text">需求实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端层请求"><span class="nav-number">4.</span> <span class="nav-text">前端层请求</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
