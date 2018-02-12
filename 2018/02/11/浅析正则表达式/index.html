@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符   字符 含义     ^ 匹">
+<meta name="description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义    ">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析正则表达式">
 <meta property="og:url" content="http://yoursite.com/2018/02/11/浅析正则表达式/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符   字符 含义     ^ 匹配输入的开始。如：/^a/匹配以a开始的字符   $ 匹配输入的结束。如：/b$">
+<meta property="og:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-12T08:33:37.535Z">
+<meta property="og:updated_time" content="2018-02-12T10:30:59.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析正则表达式">
-<meta name="twitter:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符   字符 含义     ^ 匹配输入的开始。如：/^a/匹配以a开始的字符   $ 匹配输入的结束。如：/b$">
+<meta name="twitter:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
 
 
 
@@ -400,7 +400,7 @@
         <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><blockquote>
 <p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 <code>RegExp</code> 的 <code>exec</code> 和 <code>test</code> 方法, 以及 <code>String</code> 的 <code>match</code>、<code>replace</code>、<code>search</code> 和 <code>split</code> 方法。 - - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">MDN</a></p>
 </blockquote>
-<h1 id="术语与操作符"><a href="#术语与操作符" class="headerlink" title="术语与操作符"></a>术语与操作符</h1><table>
+<h1 id="术语与操作符"><a href="#术语与操作符" class="headerlink" title="术语与操作符"></a>术语与操作符</h1><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table>
 <thead>
 <tr>
 <th style="text-align:left">字符</th>
@@ -409,7 +409,11 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">^</td>
+<td style="text-align:left">\</td>
+<td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a*/ 匹配‘a*’</td>
+</tr>
+<tr>
+<td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="text-align:left">匹配输入的开始。如：/^a/匹配以a开始的字符</td>
 </tr>
 <tr>
@@ -418,14 +422,23 @@
 </tr>
 <tr>
 <td style="text-align:left">*</td>
-<td style="text-align:left">匹配前一个表达式0次或多次，等价于{0,}。如：/cd*/匹配’abcdef’中的’cd’，匹配’abcef’中的’c’，但不会匹配’abdef’中的任何字符。</td>
+<td style="text-align:left">匹配前一个表达式0次或多次，等价于{0,}。如：/cd*/匹配‘abcdef’中的‘cd’，匹配‘abcef’中的‘c’，但不会匹配‘abdef’中的任何字符。</td>
 </tr>
 <tr>
 <td style="text-align:left">+</td>
-<td style="text-align:left">匹配前一个表达式1次或多次，等价于{1,}。如：/a+/匹配了在 “candy” 中的 ‘a’，和在 “caaaaaaandy” 中所有的 ‘a’。</td>
+<td style="text-align:left">匹配前一个表达式1次或多次，等价于{1,}。如：/a+/匹配了在 ‘candy’ 中的 ‘a’，和在 ‘caaaaaaandy’ 中所有的 ‘a’。</td>
+</tr>
+<tr>
+<td style="text-align:left">?</td>
+<td style="text-align:left">匹配前一个表达式0次或1次，等价于 {0,1}。如：/e?le?/ 匹配 ‘angel’ 中的 ‘el’，和 ‘angle’ 中的 ‘le’ 以及‘oslo’ 中的‘l’。如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪的（匹配尽量少的字符），如：/\d+?/ 匹配‘123abc’中的‘1’</td>
+</tr>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td>
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 
       
     </div>
@@ -663,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念介绍"><span class="nav-number">1.</span> <span class="nav-text">概念介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#术语与操作符"><span class="nav-number">2.</span> <span class="nav-text">术语与操作符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念介绍"><span class="nav-number">1.</span> <span class="nav-text">概念介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#术语与操作符"><span class="nav-number">2.</span> <span class="nav-text">术语与操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.1.</span> <span class="nav-text">特殊字符</span></a></li></ol></li></ol></div>
             
 
           </div>
