@@ -1932,7 +1932,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #62ff11;
+  background: #7f98c7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2769,4 +2769,8 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+@font-face {
+  font-family: Source Code Pro;
+  src: url("/fonts/SourceCodeVariable-Roman.ttf");
 }
