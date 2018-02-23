@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-12T10:30:59.705Z</updated>
+  <updated>2018-02-23T03:23:26.762Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/02/11/%E6%B5%85%E6%9E%90%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://yoursite.com/2018/02/11/浅析正则表达式/</id>
     <published>2018-02-11T07:12:06.000Z</published>
-    <updated>2018-02-12T10:30:59.705Z</updated>
+    <updated>2018-02-23T03:23:26.762Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><blockquote><p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 <code>RegExp</code> 的 <code>exec</code> 和 <code>test</code> 方法, 以及 <code>String</code> 的 <code>match</code>、<code>replace</code>、<code>search</code> 和 <code>split</code> 方法。 - - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">MDN</a></p></blockquote><h1 id="术语与操作符"><a href="#术语与操作符" class="headerlink" title="术语与操作符"></a>术语与操作符</h1><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table><thead><tr><th style="text-align:left">字符</th><th style="text-align:left">含义</th></tr></thead><tbody><tr><td style="text-align:left">\</td><td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a*/ 匹配‘a*’</td></tr><tr><td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="text-align:left">匹配输入的开始。如：/^a/匹配以a开始的字符</td></tr><tr><td style="text-align:left">$</td><td style="text-align:left">匹配输入的结束。如：/b$/匹配以b结束的字符</td></tr><tr><td style="text-align:left">*</td><td style="text-align:left">匹配前一个表达式0次或多次，等价于{0,}。如：/cd*/匹配‘abcdef’中的‘cd’，匹配‘abcef’中的‘c’，但不会匹配‘abdef’中的任何字符。</td></tr><tr><td style="text-align:left">+</td><td style="text-align:left">匹配前一个表达式1次或多次，等价于{1,}。如：/a+/匹配了在 ‘candy’ 中的 ‘a’，和在 ‘caaaaaaandy’ 中所有的 ‘a’。</td></tr><tr><td style="text-align:left">?</td><td style="text-align:left">匹配前一个表达式0次或1次，等价于 {0,1}。如：/e?le?/ 匹配 ‘angel’ 中的 ‘el’，和 ‘angle’ 中的 ‘le’ 以及‘oslo’ 中的‘l’。如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪的（匹配尽量少的字符），如：/\d+?/ 匹配‘123abc’中的‘1’</td></tr><tr><td style="text-align:left">.</td><td style="text-align:left">匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td></tr></tbody></table><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><blockquote><p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 <code>RegExp</code> 的 <code>exec</code> 和 <code>test</code> 方法, 以及 <code>String</code> 的 <code>match</code>、<code>replace</code>、<code>search</code> 和 <code>split</code> 方法。 - - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">MDN</a></p></blockquote><h1 id="术语与操作符"><a href="#术语与操作符" class="headerlink" title="术语与操作符"></a>术语与操作符</h1><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table><thead><tr><th style="text-align:left">字符</th><th style="text-align:left">含义</th></tr></thead><tbody><tr><td style="text-align:left">\</td><td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a\*/ 匹配‘a*’</td></tr><tr><td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style="text-align:left">匹配输入的开始。如：/^a/匹配以a开始的字符</td></tr><tr><td style="text-align:left">$</td><td style="text-align:left">匹配输入的结束。如：/b$/匹配以b结束的字符</td></tr><tr><td style="text-align:left">*</td><td style="text-align:left">匹配前一个表达式0次或多次，等价于{0,}。如：/cd*/匹配‘abcdef’中的‘cd’，匹配‘abcef’中的‘c’，但不会匹配‘abdef’中的任何字符。</td></tr><tr><td style="text-align:left">+</td><td style="text-align:left">匹配前一个表达式1次或多次，等价于{1,}。如：/a+/匹配了在 ‘candy’ 中的 ‘a’，和在 ‘caaaaaaandy’ 中所有的 ‘a’。</td></tr><tr><td style="text-align:left">?</td><td style="text-align:left">匹配前一个表达式0次或1次，等价于 {0,1}。如：/e?le?/ 匹配 ‘angel’ 中的 ‘el’，和 ‘angle’ 中的 ‘le’ 以及‘oslo’ 中的‘l’。如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪的（匹配尽量少的字符），如：/\d+?/ 匹配‘123abc’中的‘1’</td></tr><tr><td style="text-align:left">.</td><td style="text-align:left">匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td></tr><tr><td style="text-align:left">(x)</td><td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td></tr><tr><td style="text-align:left">(?:x)</td><td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td></tr></tbody></table><a id="more"></a>]]></content>
     
     <summary type="html">
     
@@ -40,7 +40,7 @@
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;\&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a*/ 匹配‘a*’&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a\*/ 匹配‘a*’&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;^&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/td&gt;
@@ -65,6 +65,14 @@
 &lt;tr&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;.&lt;/td&gt;
 &lt;td style=&quot;text-align:left&quot;&gt;匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;(x)&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;(?:x)&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

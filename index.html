@@ -412,7 +412,7 @@
 <tbody>
 <tr>
 <td style="text-align:left">\</td>
-<td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a*/ 匹配‘a*’</td>
+<td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a\*/ 匹配‘a*’</td>
 </tr>
 <tr>
 <td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -437,6 +437,14 @@
 <tr>
 <td style="text-align:left">.</td>
 <td style="text-align:left">匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td>
+</tr>
+<tr>
+<td style="text-align:left">(x)</td>
+<td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td>
+</tr>
+<tr>
+<td style="text-align:left">(?:x)</td>
+<td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td>
 </tr>
 </tbody>
 </table>
