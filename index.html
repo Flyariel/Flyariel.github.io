@@ -415,7 +415,7 @@
 <td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a\*/ 匹配‘a*’</td>
 </tr>
 <tr>
-<td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 <td style="text-align:left">匹配输入的开始。如：/^a/匹配以a开始的字符</td>
 </tr>
 <tr>
@@ -444,7 +444,35 @@
 </tr>
 <tr>
 <td style="text-align:left">(?:x)</td>
-<td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td>
+<td style="text-align:left">匹配 ‘x’ 但不记住匹配项。如：/(?:foo){1,2}/，如果表达式是 /foo{1,2}/，{1,2}将只对 ‘foo’ 的最后一个字符 ’o‘ 生效。如果使用非捕获括号，则{1,2}会匹配整个 ‘foo’ 单词。</td>
+</tr>
+<tr>
+<td style="text-align:left">x(?=y)</td>
+<td style="text-align:left">匹配 ‘x’ 仅仅当 ‘x’ 后面跟着 ‘y’。如：/Jack(?=Sprat)/会匹配到’Jack’仅仅当它后面跟着 ‘Sprat’。但是‘Sprat’不是匹配结果的一部分。</td>
+</tr>
+<tr>
+<td style="text-align:left">x(?!y)</td>
+<td style="text-align:left">匹配 ‘x’ 仅仅当 ‘x’ 后面不跟着 ‘y’。如：/\d+(?!.)/匹配一个数字仅仅当这个数字后面没有跟小数点的时候。正则表达式/\d+(?!.)/.exec(“3.141”)匹配‘141’但是不是‘3.141’。</td>
+</tr>
+<tr>
+<td style="text-align:left">{n}</td>
+<td style="text-align:left">匹配了前面一个字符刚好发生了n次。如：/a{2}/不会匹配“candy”中的 ‘a’,但是会匹配“caandy”中所有的a，以及“caaandy”中的前两个 ‘a’。</td>
+</tr>
+<tr>
+<td style="text-align:left">{n,m}</td>
+<td style="text-align:left">匹配匹配前面的字符至少n次，最多m次。如：/a{1, 3}/ 并不匹配“cndy”中的任意字符，匹配“candy”中得a，匹配“caandy”中的前两个a，也匹配“caaaaaaandy”中的前三个a。</td>
+</tr>
+<tr>
+<td style="text-align:left">[xyz]</td>
+<td style="text-align:left">匹配方括号的中任意字符，包括转义序列，可以使用破折号（-）来指定一个字符范围。如：[abcd] 和[a-d]是一样的。他们都匹配”brisket”中得‘b’,也都匹配“city”中的‘c’。/[a-z.]+/ 和/[\w.]+/都匹配“test.i.ng”中得所有字符。</td>
+</tr>
+<tr>
+<td style="text-align:left">[^xyz]</td>
+<td style="text-align:left">匹配任何没有包含在方括号中的字符。如：[^abc] 和 [^a-c] 是一样的。他们匹配”brisket”中得‘r’，也匹配“chop”中的‘h’。</td>
+</tr>
+<tr>
+<td style="text-align:left">[\b]</td>
+<td style="text-align:left">匹配一个退格(U+0008)。</td>
 </tr>
 </tbody>
 </table>
