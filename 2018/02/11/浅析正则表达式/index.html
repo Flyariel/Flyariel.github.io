@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Ariel&#39;s Blog">
 <meta property="og:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-24T07:59:26.009Z">
+<meta property="og:updated_time" content="2018-02-26T02:23:05.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析正则表达式">
 <meta name="twitter:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
@@ -498,6 +498,42 @@
 <tr>
 <td style="text-align:left">\d</td>
 <td style="text-align:left">匹配一个数字，等价于[0-9]。如：/\d/ 或者 /[0-9]/ 匹配 “B2 is the suite number.”中的 ‘2’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\D</td>
+<td style="text-align:left">匹配一个非数字字符，等价于[^0-9]。如：/\D/ 或者 /[^0-9]/ 匹配 “B2 is the suite number.”中的 ‘B’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\f</td>
+<td style="text-align:left">匹配一个换页符。</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">匹配一个换行符。</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">匹配一个回车符。</td>
+</tr>
+<tr>
+<td style="text-align:left">\s</td>
+<td style="text-align:left">匹配一个空白字符，包括空格、制表符、换页符和换行符。如：/\s\w*/ 匹配 “foo bar.”中的 ‘ bar’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\S</td>
+<td style="text-align:left">匹配一个非空白字符。如：/\S\w*/ 匹配 “foo bar.”中的 ‘foo’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\w</td>
+<td style="text-align:left">匹配一个单字字符。如：/\w/ 匹配 “apple,” 中的 ‘a’， “$5.28,” 中的 ‘5’ 和 “3D.” 中的 ‘3’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\W</td>
+<td style="text-align:left">匹配一个非单字字符。如：/\W/ 或者 /[^A-Za-z0-9_]/ 匹配 “50%.” 中的 ‘%’。</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">当 n 是一个正整数，一个返回引用到最后一个与有n插入的正则表达式(counting left parentheses)匹配的副字符串。如：/apple(,)\sorange\1/ 匹配 “apple, orange, cherry, peach.”中的 ‘apple, orange,’ 。</td>
 </tr>
 </tbody>
 </table>
