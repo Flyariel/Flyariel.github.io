@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-26T02:23:05.984Z</updated>
+  <updated>2018-02-27T09:31:46.015Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Roadmap to becoming a web developer in 2018</title>
+    <link href="http://yoursite.com/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/"/>
+    <id>http://yoursite.com/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/</id>
+    <published>2018-02-27T09:12:06.000Z</published>
+    <updated>2018-02-27T09:31:46.015Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/oxsayps.png" alt="Web Developer Roadmap"></p><blockquote><p>Roadmap to becoming a web developer in 2018</p><p>There is a <a href="https://www.youtube.com/watch?v=wdjvfPMZ7hg" target="_blank" rel="noopener">recorded version of this on youtube now</a>. Also, I just created this channel and <a href="https://github.com/hugobots/we-want" target="_blank" rel="noopener">have got some nice plans for the screencasts</a> so make sure to <a href="https://www.youtube.com/c/kamranahmed_se" target="_blank" rel="noopener">subscribe to the channel</a>, if you would like :)</p></blockquote><p>Below you find a set of charts demonstrating the paths that you can take and the technologies that you would want to adopt in order to become a frontend, backend or a devops. I made these charts for an old professor of mine who wanted something to share with his college students to give them a perspective.</p><p>If you think that these can be improved in anyway, please do suggest.</p><hr><p align="center"><b> Did you like this guide and want more of the similar content? </b><br>Subscribe for the launch of <a href="http://hugobots.com" target="_blank" rel="noopener">Hugobots</a> or <a href="http://twitter.com/kamranahmedse" target="_blank" rel="noopener">follow me on twitter</a>!</p><hr><a id="more"></a><h2 id="🚀-Introduction"><a href="#🚀-Introduction" class="headerlink" title="🚀 Introduction"></a>🚀 Introduction</h2><p><img src="https://i.imgur.com/OZUOUtI.png" alt=""></p><h2 id="🎨-Front-end-Roadmap"><a href="#🎨-Front-end-Roadmap" class="headerlink" title="🎨 Front-end Roadmap"></a>🎨 Front-end Roadmap</h2><p><img src="https://i.imgur.com/WrfLESm.png" alt=""></p><h2 id="👽-Back-end-Roadmap"><a href="#👽-Back-end-Roadmap" class="headerlink" title="👽 Back-end Roadmap"></a>👽 Back-end Roadmap</h2><p>For the backend, personally I would prefer Node.js and PHP 7 for the full time. Plus, I have been experimenting lately with Go and I quite like it. Apart from these, if I have to choose another one, I would go for Ruby. However this is just my personal preference, you can choose any of the shown languages and you will be good.</p><p><img src="https://i.imgur.com/Ihg4YAb.png" alt=""></p><h2 id="👷-DevOps-Roadmap"><a href="#👷-DevOps-Roadmap" class="headerlink" title="👷 DevOps Roadmap"></a>👷 DevOps Roadmap</h2><p><img src="https://i.imgur.com/pyg9mH1.png" alt=""></p><h2 id="🚦-Wrap-Up"><a href="#🚦-Wrap-Up" class="headerlink" title="🚦 Wrap Up"></a>🚦 Wrap Up</h2><p>If you think any of the roadmaps can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.</p><h2 id="☑-TODO"><a href="#☑-TODO" class="headerlink" title="☑ TODO"></a>☑ TODO</h2><ul><li>[X] Add Frontend Roadmap</li><li>[X] Add Backend Roadmap</li><li>[X] Add DevOps Roadmap</li><li>[ ] Add relevant resources for each</li></ul><h2 id="👬-Contribution"><a href="#👬-Contribution" class="headerlink" title="👬 Contribution"></a>👬 Contribution</h2><p>The roadmaps are built using <a href="https://balsamiq.com/products/mockups/" target="_blank" rel="noopener">Balsamiq</a>. Project file can be found at <code>/project-files</code> directory. To modify any of the roadmaps, open Balsamiq, click <strong>Project &gt; Import &gt; Mockup JSON</strong>, it will open the roadmap for you, update it, upload and update the images in readme and create a PR.        </p><ul><li>Open pull request with improvements</li><li>Discuss ideas in issues</li><li>Spread the word</li><li>Reach out with any feedback</li></ul><h2 id="Sponsored-By"><a href="#Sponsored-By" class="headerlink" title="Sponsored By"></a>Sponsored By</h2><ul><li><a href="https://hackr.io" target="_blank" rel="noopener">Hackr.io - Find &amp; Share the Best Online Programming Courses &amp; Tutorials</a></li><li><a href="http://highig.com/" target="_blank" rel="noopener">Highig - Think and its done</a></li></ul><blockquote><p>搬运自<a href="https://github.com/kamranahmedse/developer-roadmap/blob/master/README.md" target="_blank" rel="noopener">kamranahmedse/developer-roadmap</a></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/oxsayps.png&quot; alt=&quot;Web Developer Roadmap&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Roadmap to becoming a web developer in 2018&lt;/p&gt;
+&lt;p&gt;There is a &lt;a href=&quot;https://www.youtube.com/watch?v=wdjvfPMZ7hg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;recorded version of this on youtube now&lt;/a&gt;. Also, I just created this channel and &lt;a href=&quot;https://github.com/hugobots/we-want&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;have got some nice plans for the screencasts&lt;/a&gt; so make sure to &lt;a href=&quot;https://www.youtube.com/c/kamranahmed_se&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;subscribe to the channel&lt;/a&gt;, if you would like :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Below you find a set of charts demonstrating the paths that you can take and the technologies that you would want to adopt in order to become a frontend, backend or a devops. I made these charts for an old professor of mine who wanted something to share with his college students to give them a perspective.&lt;/p&gt;
+&lt;p&gt;If you think that these can be improved in anyway, please do suggest.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;b&gt; Did you like this guide and want more of the similar content? &lt;/b&gt;&lt;br&gt;Subscribe for the launch of &lt;a href=&quot;http://hugobots.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hugobots&lt;/a&gt; or &lt;a href=&quot;http://twitter.com/kamranahmedse&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;follow me on twitter&lt;/a&gt;!&lt;/p&gt;
+
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="前端杂谈" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="前端杂谈" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>浅析正则表达式</title>
