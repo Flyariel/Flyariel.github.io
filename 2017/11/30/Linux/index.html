@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
+<meta name="description" content="需求背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下查找包含指定内容的文件">
 <meta property="og:url" content="http://yoursite.com/2017/11/30/Linux/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
+<meta property="og:description" content="需求背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/1.png">
 <meta property="og:image" content="http://yoursite.com/images/2.png">
-<meta property="og:updated_time" content="2017-12-04T10:39:46.564Z">
+<meta property="og:updated_time" content="2018-03-07T01:14:23.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下查找包含指定内容的文件">
-<meta name="twitter:description" content="背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
+<meta name="twitter:description" content="需求背景在hexo上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：">
 <meta name="twitter:image" content="http://yoursite.com/images/1.png">
 
 
@@ -400,12 +400,10 @@
       
 
       
-        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类|标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/1.png" alt="问题样式"><br><a id="more"></a></p>
-<p>嗯，可以准备下手修改样式了！but……这个样式表在哪里啊？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了</p>
-<h2 id="机智的find命令"><a href="#机智的find命令" class="headerlink" title="机智的find命令"></a>机智的find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：<br>执行，good，找到了一大堆文件：<br><img src="/images/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p>
-<h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><blockquote>
-<p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux下查找文件/内容之find命令.md</strong>，然后<code>cat xx.md &gt; Linux下查找文件/内容之find命令.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p>
-</blockquote>
+        <h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/1.png" alt="问题样式"><br><a id="more"></a></p>
+<p>嗯，可以准备下手修改样式了！but……这个样式表在哪里？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了</p>
+<h2 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：其中<code>|</code>表示将上一次的<code>find</code>指令执行得到的结果交由下一个指令继续执行。执行该完整指令，good，找到了一大堆文件：<br><img src="/images/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p>
+<h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux.md</strong>，然后<code>cat xx.md &gt; Linux.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p>
 
       
     </div>
@@ -643,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机智的find命令"><span class="nav-number">2.</span> <span class="nav-text">机智的find命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小插曲"><span class="nav-number">3.</span> <span class="nav-text">小插曲</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求背景"><span class="nav-number">1.</span> <span class="nav-text">需求背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find命令"><span class="nav-number">2.</span> <span class="nav-text">find命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小插曲"><span class="nav-number">3.</span> <span class="nav-text">小插曲</span></a></li></ol></div>
             
 
           </div>
