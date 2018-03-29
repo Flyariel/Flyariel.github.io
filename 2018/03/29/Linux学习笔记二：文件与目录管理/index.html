@@ -119,18 +119,18 @@
 
 
 
-<meta name="description" content="沉迷卡农无法自拔">
+<meta name="description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习笔记二：文件与目录管理">
 <meta property="og:url" content="http://yoursite.com/2018/03/29/Linux学习笔记二：文件与目录管理/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="沉迷卡农无法自拔">
+<meta property="og:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-29T07:02:37.000Z">
+<meta property="og:updated_time" content="2018-03-29T11:49:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
-<meta name="twitter:description" content="沉迷卡农无法自拔">
+<meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了">
 
 
 
@@ -392,7 +392,45 @@
       
 
       
-        
+        <h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">目录</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.</td>
+<td style="text-align:left">代表此层目录</td>
+</tr>
+<tr>
+<td style="text-align:left">..</td>
+<td style="text-align:left">代表上一层目录</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">代表前一个工作目录</td>
+</tr>
+<tr>
+<td style="text-align:left">~</td>
+<td style="text-align:left">代表【目前用户身份】所在的家目录</td>
+</tr>
+<tr>
+<td style="text-align:left">~arieltian</td>
+<td style="text-align:left">代表 arieltian 这个用户的家目录</td>
+</tr>
+</tbody>
+</table>
+<p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了解下几个常见的目录操作指令</p>
+<ul>
+<li>cd：变换目录</li>
+<li>pwd：显示当前目录</li>
+<li>mkdir：建立一个新的目录</li>
+<li>rmdir：删除一个空目录</li>
+</ul>
+
       
     </div>
     
@@ -482,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -614,6 +661,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录与路径"><span class="nav-number">1.</span> <span class="nav-text">目录与路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录的相关操作"><span class="nav-number">1.1.</span> <span class="nav-text">目录的相关操作</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
