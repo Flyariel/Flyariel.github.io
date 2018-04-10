@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="Apache," />
 
 
 
@@ -119,18 +119,23 @@
 
 
 
-<meta name="description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义    ">
-<meta name="keywords" content="JavaScript">
+<meta name="description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
+<meta name="keywords" content="Apache">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浅析正则表达式">
-<meta property="og:url" content="http://yoursite.com/2018/02/11/浅析正则表达式/index.html">
+<meta property="og:title" content="MacOS 下配置Apache本地域名服务器">
+<meta property="og:url" content="http://yoursite.com/2017/12/01/MacOS-Apache/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
+<meta property="og:description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T02:23:05.984Z">
+<meta property="og:image" content="http://yoursite.com/images/hosts.png">
+<meta property="og:image" content="http://yoursite.com/images/openvirtual.png">
+<meta property="og:image" content="http://yoursite.com/images/virtualhost.png">
+<meta property="og:image" content="http://yoursite.com/images/load.png">
+<meta property="og:updated_time" content="2018-04-10T05:43:16.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浅析正则表达式">
-<meta name="twitter:description" content="概念介绍 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。 - - MDN  术语与操作符特殊字符   字符 含义     \ 匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字">
+<meta name="twitter:title" content="MacOS 下配置Apache本地域名服务器">
+<meta name="twitter:description" content="需求来源在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。 实施过程配置本地hostsvi /etc/hosts，配置自己预期的域名到hosts文件">
+<meta name="twitter:image" content="http://yoursite.com/images/hosts.png">
 
 
 
@@ -160,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/11/浅析正则表达式/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/01/MacOS-Apache/"/>
 
 
 
 
 
-  <title>浅析正则表达式 | Ariel's Blog</title>
+  <title>MacOS 下配置Apache本地域名服务器 | Ariel's Blog</title>
   
 
 
@@ -303,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/11/浅析正则表达式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/MacOS-Apache/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -320,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">浅析正则表达式</h1>
+          <h1 class="post-title" itemprop="name headline">MacOS 下配置Apache本地域名服务器</h1>
         
 
         <div class="post-meta">
@@ -332,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-11T15:12:06+08:00">
-                2018-02-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T11:17:29+08:00">
+                2017-12-01
               </time>
             
 
@@ -355,8 +360,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
+                  <a href="/categories/服务器/" itemprop="url" rel="index">
+                    <span itemprop="name">服务器</span>
                   </a>
                 </span>
 
@@ -392,146 +397,12 @@
       
 
       
-        <h1 id="概念介绍"><a href="#概念介绍" class="headerlink" title="概念介绍"></a>概念介绍</h1><blockquote>
-<p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 <code>RegExp</code> 的 <code>exec</code> 和 <code>test</code> 方法, 以及 <code>String</code> 的 <code>match</code>、<code>replace</code>、<code>search</code> 和 <code>split</code> 方法。 - - <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank" rel="noopener">MDN</a></p>
-</blockquote>
-<h1 id="术语与操作符"><a href="#术语与操作符" class="headerlink" title="术语与操作符"></a>术语与操作符</h1><h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">字符</th>
-<th style="text-align:left">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\</td>
-<td style="text-align:left">匹配将依照下列规则：在非特殊字符之前的反斜杠表示下一个字符是特殊的；特殊字符前的反斜杠则转义其后的特殊字符为字面量。如：/\d/ 匹配一个数字，/a\*/ 匹配‘a*’</td>
-</tr>
-<tr>
-<td style="text-align:left">^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="text-align:left">匹配输入的开始。如：/^a/匹配以a开始的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">$</td>
-<td style="text-align:left">匹配输入的结束。如：/b$/匹配以b结束的字符</td>
-</tr>
-<tr>
-<td style="text-align:left">*</td>
-<td style="text-align:left">匹配前一个表达式0次或多次，等价于{0,}。如：/cd*/匹配‘abcdef’中的‘cd’，匹配‘abcef’中的‘c’，但不会匹配‘abdef’中的任何字符。</td>
-</tr>
-<tr>
-<td style="text-align:left">+</td>
-<td style="text-align:left">匹配前一个表达式1次或多次，等价于{1,}。如：/a+/匹配了在 ‘candy’ 中的 ‘a’，和在 ‘caaaaaaandy’ 中所有的 ‘a’。</td>
-</tr>
-<tr>
-<td style="text-align:left">?</td>
-<td style="text-align:left">匹配前一个表达式0次或1次，等价于 {0,1}。如：/e?le?/ 匹配 ‘angel’ 中的 ‘el’，和 ‘angle’ 中的 ‘le’ 以及‘oslo’ 中的‘l’。如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪的（匹配尽量少的字符），如：/\d+?/ 匹配‘123abc’中的‘1’</td>
-</tr>
-<tr>
-<td style="text-align:left">.</td>
-<td style="text-align:left">匹配除换行符之外的任何单个字符。如：/.n/将会匹配 “nay, an apple is on the tree” 中的 ‘an’ 和 ‘on’，但是不会匹配 ‘nay’。</td>
-</tr>
-<tr>
-<td style="text-align:left">(x)</td>
-<td style="text-align:left">匹配 ‘x’ 并且记住匹配项。如：/(foo) (bar) \1 \2/将会匹配 “foo bar foo bar” 并记住前2个单词。</td>
-</tr>
-<tr>
-<td style="text-align:left">(?:x)</td>
-<td style="text-align:left">匹配 ‘x’ 但不记住匹配项。如：/(?:foo){1,2}/，如果表达式是 /foo{1,2}/，{1,2}将只对 ‘foo’ 的最后一个字符 ’o‘ 生效。如果使用非捕获括号，则{1,2}会匹配整个 ‘foo’ 单词。</td>
-</tr>
-<tr>
-<td style="text-align:left">x(?=y)</td>
-<td style="text-align:left">匹配 ‘x’ 仅仅当 ‘x’ 后面跟着 ‘y’。如：/Jack(?=Sprat)/会匹配到’Jack’仅仅当它后面跟着 ‘Sprat’。但是‘Sprat’不是匹配结果的一部分。</td>
-</tr>
-<tr>
-<td style="text-align:left">x(?!y)</td>
-<td style="text-align:left">匹配 ‘x’ 仅仅当 ‘x’ 后面不跟着 ‘y’。如：/\d+(?!.)/匹配一个数字仅仅当这个数字后面没有跟小数点的时候。正则表达式/\d+(?!.)/.exec(“3.141”)匹配‘141’但是不是‘3.141’。</td>
-</tr>
-<tr>
-<td style="text-align:left">{n}</td>
-<td style="text-align:left">匹配了前面一个字符刚好发生了n次。如：/a{2}/不会匹配“candy”中的 ‘a’,但是会匹配“caandy”中所有的a，以及“caaandy”中的前两个 ‘a’。</td>
-</tr>
-<tr>
-<td style="text-align:left">{n,m}</td>
-<td style="text-align:left">匹配匹配前面的字符至少n次，最多m次。如：/a{1, 3}/ 并不匹配“cndy”中的任意字符，匹配“candy”中得a，匹配“caandy”中的前两个a，也匹配“caaaaaaandy”中的前三个a。</td>
-</tr>
-<tr>
-<td style="text-align:left">[xyz]</td>
-<td style="text-align:left">匹配方括号的中任意字符，包括转义序列，可以使用破折号（-）来指定一个字符范围。如：[abcd] 和[a-d]是一样的。他们都匹配”brisket”中得‘b’,也都匹配“city”中的‘c’。/[a-z.]+/ 和/[\w.]+/都匹配“test.i.ng”中得所有字符。</td>
-</tr>
-<tr>
-<td style="text-align:left">[^xyz]</td>
-<td style="text-align:left">匹配任何没有包含在方括号中的字符。如：[^abc] 和 [^a-c] 是一样的。他们匹配”brisket”中得‘r’，也匹配“chop”中的‘h’。</td>
-</tr>
-<tr>
-<td style="text-align:left">[\b]</td>
-<td style="text-align:left">匹配一个退格(U+0008)。</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">字符</th>
-<th style="text-align:left">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">\b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td style="text-align:left">匹配一个词的边界。如：/\bm/匹配“moon”中的‘m’；/oo\b/并不匹配 “moon”中的 ‘oo’，/oon\b/匹配 “moon”中的 ‘oon’</td>
-</tr>
-<tr>
-<td style="text-align:left">\B</td>
-<td style="text-align:left">匹配一个非单词边界，一个字符串的开始和结尾都被认为是非单词。如：/\B../匹配 “noonday” 中得 ‘oo’, 而/y\B./匹配 “possibly yesterday”中得 ‘ye’</td>
-</tr>
-<tr>
-<td style="text-align:left">\cX</td>
-<td style="text-align:left">当X是处于A到Z之间的字符的时候，匹配字符串中的一个控制符。如：/\cM/ 匹配字符串中的 control-M (U+000D)。</td>
-</tr>
-<tr>
-<td style="text-align:left">\d</td>
-<td style="text-align:left">匹配一个数字，等价于[0-9]。如：/\d/ 或者 /[0-9]/ 匹配 “B2 is the suite number.”中的 ‘2’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\D</td>
-<td style="text-align:left">匹配一个非数字字符，等价于[^0-9]。如：/\D/ 或者 /[^0-9]/ 匹配 “B2 is the suite number.”中的 ‘B’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\f</td>
-<td style="text-align:left">匹配一个换页符。</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">匹配一个换行符。</td>
-</tr>
-<tr>
-<td style="text-align:left">\r</td>
-<td style="text-align:left">匹配一个回车符。</td>
-</tr>
-<tr>
-<td style="text-align:left">\s</td>
-<td style="text-align:left">匹配一个空白字符，包括空格、制表符、换页符和换行符。如：/\s\w*/ 匹配 “foo bar.”中的 ‘ bar’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\S</td>
-<td style="text-align:left">匹配一个非空白字符。如：/\S\w*/ 匹配 “foo bar.”中的 ‘foo’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\w</td>
-<td style="text-align:left">匹配一个单字字符。如：/\w/ 匹配 “apple,” 中的 ‘a’， “$5.28,” 中的 ‘5’ 和 “3D.” 中的 ‘3’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\W</td>
-<td style="text-align:left">匹配一个非单字字符。如：/\W/ 或者 /[^A-Za-z0-9_]/ 匹配 “50%.” 中的 ‘%’。</td>
-</tr>
-<tr>
-<td style="text-align:left">\n</td>
-<td style="text-align:left">当 n 是一个正整数，一个返回引用到最后一个与有n插入的正则表达式(counting left parentheses)匹配的副字符串。如：/apple(,)\sorange\1/ 匹配 “apple, orange, cherry, peach.”中的 ‘apple, orange,’ 。</td>
-</tr>
-</tbody>
-</table>
+        <h2 id="需求来源"><a href="#需求来源" class="headerlink" title="需求来源"></a>需求来源</h2><p>在开发项目的过程中，遇到需要经过域名访问资源来进行debug的场景，但项目是静态资源项目，没有本地服务。SO，想到了通过配置本地Apache域名访问资源的办法。</p>
+<h2 id="实施过程"><a href="#实施过程" class="headerlink" title="实施过程"></a>实施过程</h2><h3 id="配置本地hosts"><a href="#配置本地hosts" class="headerlink" title="配置本地hosts"></a>配置本地hosts</h3><p><code>vi /etc/hosts</code>，配置自己预期的域名到hosts文件<br><img src="/images/hosts.png" alt="hosts"><br><a id="more"></a></p>
+<h3 id="开启Apache虚拟主机功能"><a href="#开启Apache虚拟主机功能" class="headerlink" title="开启Apache虚拟主机功能"></a>开启Apache虚拟主机功能</h3><p><code>vi /etc/apache2/httpd.conf</code>打开Apache配置文件，找到<code>Include /private/etc/apache2/extra/httpd-vhosts.conf</code>，放开注释，开启虚拟主机功能:<br><img src="/images/openvirtual.png" alt="virtual"></p>
+<p><code>vi /etc/apache2/extra/httpd-vhosts.conf</code>配置虚拟主机：</p>
+<p><img src="/images/virtualhost.png" alt="virtualhost"></p>
+<h3 id="启动Apache服务，域名访问项目"><a href="#启动Apache服务，域名访问项目" class="headerlink" title="启动Apache服务，域名访问项目"></a>启动Apache服务，域名访问项目</h3><p><code>sudo apachectl start</code>，好了，现在可以通过域名访问项目资源了：<br><img src="/images/load.png" alt="virtualhost"></p>
 
       
     </div>
@@ -549,7 +420,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
           
         </div>
       
@@ -562,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/08/Node实现文件系统操作：导入导出Excel/" rel="next" title="Node实现文件系统操作：导出Excel">
-                <i class="fa fa-chevron-left"></i> Node实现文件系统操作：导出Excel
+              <a href="/2017/11/30/online-problem-logs/" rel="next" title="线上问题日志定位手段">
+                <i class="fa fa-chevron-left"></i> 线上问题日志定位手段
               </a>
             
           </div>
@@ -572,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/" rel="prev" title="Roadmap to becoming a web developer in 2018">
-                Roadmap to becoming a web developer in 2018 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/05/webpack-config/" rel="prev" title="webpack部署过程中遇到的问题">
+                webpack部署过程中遇到的问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -777,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念介绍"><span class="nav-number">1.</span> <span class="nav-text">概念介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#术语与操作符"><span class="nav-number">2.</span> <span class="nav-text">术语与操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.1.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元字符"><span class="nav-number">2.2.</span> <span class="nav-text">元字符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#需求来源"><span class="nav-number">1.</span> <span class="nav-text">需求来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实施过程"><span class="nav-number">2.</span> <span class="nav-text">实施过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置本地hosts"><span class="nav-number">2.1.</span> <span class="nav-text">配置本地hosts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Apache虚拟主机功能"><span class="nav-number">2.2.</span> <span class="nav-text">开启Apache虚拟主机功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动Apache服务，域名访问项目"><span class="nav-number">2.3.</span> <span class="nav-text">启动Apache服务，域名访问项目</span></a></li></ol></li></ol></div>
             
 
           </div>
