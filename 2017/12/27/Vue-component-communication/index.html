@@ -127,12 +127,12 @@
 <meta property="og:site_name" content="Ariel&#39;s Blog">
 <meta property="og:description" content="定义父子组件HTML12345678&amp;lt;div class=&quot;hello&quot;&amp;gt;    &amp;lt;Welcome :message=&quot;msg&quot; @contact=&quot;comFromChildren&quot;&amp;gt;&amp;lt;/Welcome&amp;gt;    &amp;lt;form&amp;gt;        &amp;lt;input type=&quot;text&quot; name=&quot;username&quot; v-model=&quot;userName&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/parentToChild.png">
-<meta property="og:updated_time" content="2018-04-10T05:44:24.810Z">
+<meta property="og:image" content="http://yoursite.com/images/2017-12-27-Vue-component-communication/parentToChild.png">
+<meta property="og:updated_time" content="2018-04-10T06:21:42.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习笔记之父子组件通信">
 <meta name="twitter:description" content="定义父子组件HTML12345678&amp;lt;div class=&quot;hello&quot;&amp;gt;    &amp;lt;Welcome :message=&quot;msg&quot; @contact=&quot;comFromChildren&quot;&amp;gt;&amp;lt;/Welcome&amp;gt;    &amp;lt;form&amp;gt;        &amp;lt;input type=&quot;text&quot; name=&quot;username&quot; v-model=&quot;userName&quot;">
-<meta name="twitter:image" content="http://yoursite.com/images/parentToChild.png">
+<meta name="twitter:image" content="http://yoursite.com/images/2017-12-27-Vue-component-communication/parentToChild.png">
 
 
 
@@ -399,7 +399,7 @@
 <a id="more"></a>
 <h1 id="定义子组件"><a href="#定义子组件" class="headerlink" title="定义子组件"></a>定义子组件</h1><h2 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--接受父组件传来的消息--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; message &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="JavaScript-1"><a href="#JavaScript-1" class="headerlink" title="JavaScript"></a>JavaScript</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">"welcome"</span>,</span><br><span class="line">    props: [<span class="string">'message'</span>],</span><br><span class="line">    created() &#123;</span><br><span class="line">        <span class="keyword">this</span>.$emit(<span class="string">'contact'</span>); <span class="comment">//通知父组件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="子组件接收父组件数据"><a href="#子组件接收父组件数据" class="headerlink" title="子组件接收父组件数据"></a>子组件接收父组件数据</h1><p><img src="/images/parentToChild.png" alt="父组件向子组件传值"></p>
+<h1 id="子组件接收父组件数据"><a href="#子组件接收父组件数据" class="headerlink" title="子组件接收父组件数据"></a>子组件接收父组件数据</h1><p><img src="/images/2017-12-27-Vue-component-communication/parentToChild.png" alt="父组件向子组件传值"></p>
 
       
     </div>

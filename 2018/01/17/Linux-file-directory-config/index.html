@@ -127,20 +127,20 @@
 <meta property="og:site_name" content="Ariel&#39;s Blog">
 <meta property="og:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/LinuxFiles.png">
-<meta property="og:image" content="http://yoursite.com/images/chgrp-1.png">
-<meta property="og:image" content="http://yoursite.com/images/chgrp-2.png">
-<meta property="og:image" content="http://yoursite.com/images/chown-1.png">
-<meta property="og:image" content="http://yoursite.com/images/chmod-1.png">
-<meta property="og:image" content="http://yoursite.com/images/chmod-2.png">
-<meta property="og:image" content="http://yoursite.com/images/chmod-3.png">
-<meta property="og:image" content="http://yoursite.com/images/directory-1.png">
-<meta property="og:image" content="http://yoursite.com/images/directoryTree-1.png">
-<meta property="og:updated_time" content="2018-04-10T05:49:23.702Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/LinuxFiles.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chgrp-1.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chgrp-2.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chown-1.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chmod-1.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chmod-2.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/chmod-3.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/directory-1.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/directoryTree-1.png">
+<meta property="og:updated_time" content="2018-04-10T06:25:20.239Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记一：文件权限与目录配置">
 <meta name="twitter:description" content="文件属性u start –&amp;gt; permission deny ？老铁，肯定是权限不够 ！虽然你sudo u start了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下ls -l（先别问为什么，我也不知道），看到以下结果：    ls是list的意思，该命令显示文件的文件名与相关属性，参数-l表示以单列格式输出文件的相关信息。">
-<meta name="twitter:image" content="http://yoursite.com/images/LinuxFiles.png">
+<meta name="twitter:image" content="http://yoursite.com/images/2018-01-17-Linux-file-directory-config/LinuxFiles.png">
 
 
 
@@ -402,7 +402,7 @@
       
 
       
-        <h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><p>u start –&gt; permission deny ？老铁，肯定是权限不够 ！虽然你<code>sudo u start</code>了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下<code>ls -l</code>（先别问为什么，我也不知道），看到以下结果：<br><img src="/images/LinuxFiles.png" alt="Linux文件属性">  </p>
+        <h1 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h1><p>u start –&gt; permission deny ？老铁，肯定是权限不够 ！虽然你<code>sudo u start</code>了，但我还是想从Linux的文件属性下嘴，和大家一起学习学习Linux的文件权限。话不多说，首先我们执行一下<code>ls -l</code>（先别问为什么，我也不知道），看到以下结果：<br><img src="/images/2018-01-17-Linux-file-directory-config/LinuxFiles.png" alt="Linux文件属性">  </p>
 <blockquote>
 <p><code>ls</code>是list的意思，该命令显示文件的文件名与相关属性，参数<code>-l</code>表示以单列格式输出文件的相关信息。 </p>
 </blockquote>
@@ -434,13 +434,13 @@
 <li>要被改变的组名必须要在<code>/etc/group</code>文件内 存在才行，否则会执行失败</li>
 <li>命令格式为：chgrp [-R] dirname/filename（<code>-R</code>表示进行递归的持续更改，即连同子目录下的所有文件都更新为这个用户组）</li>
 </ul>
-<p><img src="/images/chgrp-1.png" alt="改变所属用户组"><br><img src="/images/chgrp-2.png" alt="改变所属用户组"></p>
+<p><img src="/images/2018-01-17-Linux-file-directory-config/chgrp-1.png" alt="改变所属用户组"><br><img src="/images/2018-01-17-Linux-file-directory-config/chgrp-2.png" alt="改变所属用户组"></p>
 <h2 id="改变文件所有者：chown（change-owner）"><a href="#改变文件所有者：chown（change-owner）" class="headerlink" title="改变文件所有者：chown（change owner）"></a>改变文件所有者：chown（change owner）</h2><ul>
 <li>用户必须是已经存在于系统中的账号（/etc/passwd这个文件中有记录的用户）</li>
 <li>chown [-R] 账号名称 文件或目录</li>
 <li>chown [-R] 账号名称:组名 文件或目录</li>
 </ul>
-<p><img src="/images/chown-1.png" alt="改变文件拥有者"></p>
+<p><img src="/images/2018-01-17-Linux-file-directory-config/chown-1.png" alt="改变文件拥有者"></p>
 <h2 id="改变文件权限：chmod（change-mode）"><a href="#改变文件权限：chmod（change-mode）" class="headerlink" title="改变文件权限：chmod（change mode）"></a>改变文件权限：chmod（change mode）</h2><p>文件权限的改变使用的是chmod指令，设定方法有两种：数字和符号</p>
 <p><strong>1、数字类型改变文件权限</strong><br>Linux文件的基本权限有9个，分别是owner/group/others三种身份各有自己的read/write/execute权限，如之前看到的文件权限：<code>[-rwxr-xr--]</code>，这9个权限是3个3个一组。我们可以用数字来代表各个权限</p>
 <ul>
@@ -454,13 +454,13 @@
 <li>group  = r-x = 4+0+1 = 5</li>
 <li>others = r– = 4+0+0 = 4</li>
 </ul>
-<p>所以，如果要将上述例子中权限为<code>[-rwxr-xr--]</code>的权限改为<code>[-rwxrwxrwx]</code>，那么对应的权限分数就是<code>[4+2+1][4+2+1][4+2+1]=777</code>，下面我们一起来看下chmod指令的实际应用吧<br><img src="/images/chmod-1.png" alt="数字类型改变文件权限"></p>
-<p><strong>2、符号类型改变文件权限</strong><br>上面有讲到，文件的权限有9个，分别是user(3个：rwx)、group(3个：rwx)、others(3个：rwx)，由u、g、o分别代表3中身份<br><img src="/images/chmod-2.png" alt="符号类型改变文件权限"></p>
-<p>来实际操作一下吧！假如我们要<code>设定</code>一个文件的权限为<code>drwxr--r--</code>，则<code>u=rwx,go=r</code><br><img src="/images/chmod-3.png" alt="符号类型改变文件权限"></p>
+<p>所以，如果要将上述例子中权限为<code>[-rwxr-xr--]</code>的权限改为<code>[-rwxrwxrwx]</code>，那么对应的权限分数就是<code>[4+2+1][4+2+1][4+2+1]=777</code>，下面我们一起来看下chmod指令的实际应用吧<br><img src="/images/2018-01-17-Linux-file-directory-config/chmod-1.png" alt="数字类型改变文件权限"></p>
+<p><strong>2、符号类型改变文件权限</strong><br>上面有讲到，文件的权限有9个，分别是user(3个：rwx)、group(3个：rwx)、others(3个：rwx)，由u、g、o分别代表3中身份<br><img src="/images/2018-01-17-Linux-file-directory-config/chmod-2.png" alt="符号类型改变文件权限"></p>
+<p>来实际操作一下吧！假如我们要<code>设定</code>一个文件的权限为<code>drwxr--r--</code>，则<code>u=rwx,go=r</code><br><img src="/images/2018-01-17-Linux-file-directory-config/chmod-3.png" alt="符号类型改变文件权限"></p>
 <blockquote>
 <p>需要特别注意的是：<code>u=rwx,go=r</code>是连在一起的，中间没有任何空格符！</p>
 </blockquote>
-<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置标准–FHS"><a href="#Linux目录配置标准–FHS" class="headerlink" title="Linux目录配置标准–FHS"></a>Linux目录配置标准–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据“文件系统使用的频率以及是否允许文件系统使用者随意更改”而将目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/directory-1.png" alt="Linux目录配置"><br>上表中的目录是一些代表性的目录，这些目录代表的四个类型的意义如下：</p>
+<h1 id="Linux目录配置"><a href="#Linux目录配置" class="headerlink" title="Linux目录配置"></a>Linux目录配置</h1><h2 id="Linux目录配置标准–FHS"><a href="#Linux目录配置标准–FHS" class="headerlink" title="Linux目录配置标准–FHS"></a>Linux目录配置标准–FHS</h2><p>目前大多数Linux系统都遵循FHS规范，FHS依据“文件系统使用的频率以及是否允许文件系统使用者随意更改”而将目录定义成四种交互作用的形态，大概像下面这样：<br><img src="/images/2018-01-17-Linux-file-directory-config/directory-1.png" alt="Linux目录配置"><br>上表中的目录是一些代表性的目录，这些目录代表的四个类型的意义如下：</p>
 <ul>
 <li>可分享的：可以分享给其他系统挂载使用（例如执行文件、用户的邮件数据等）</li>
 <li>不可分享的：个人机器上运行的装置文件或者与程序相关的socket文件（仅与自身机器有关）</li>
@@ -479,7 +479,7 @@
 <li>每一个目录不止能使用本地段的文件系统，也可以使用网络上的文件系统。例如可以利用<code>Network File System（NFS）</code>服务器挂载特定目录</li>
 <li>每一个文件在此目录树种的文件名（包含完整路径）都是独一无二的</li>
 </ul>
-<p>如果将整个目录树以图示的方法来显示，并将较为重要的文件数据列出来的话，目录树架构图大概如图所示：<br><img src="/images/directoryTree-1.png" alt="Linux目录树"></p>
+<p>如果将整个目录树以图示的方法来显示，并将较为重要的文件数据列出来的话，目录树架构图大概如图所示：<br><img src="/images/2018-01-17-Linux-file-directory-config/directoryTree-1.png" alt="Linux目录树"></p>
 <h2 id="绝对路径与相对路径"><a href="#绝对路径与相对路径" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h2><p>根据文件名写法的不同，可以将路径（path）定义为相对路径（relative）与绝对路径（absolute），这两种文件名/路径的写法依据如下：</p>
 <ul>
 <li>绝对路径：由根目录（/）开始写起，如 <code>/etc/hosts</code></li>
