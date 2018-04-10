@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-29T11:49:58.000Z</updated>
+  <updated>2018-04-08T10:23:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/03/29/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/"/>
     <id>http://yoursite.com/2018/03/29/Linux学习笔记二：文件与目录管理/</id>
     <published>2018-03-29T07:01:58.000Z</published>
-    <updated>2018-03-29T11:49:58.000Z</updated>
+    <updated>2018-04-08T10:23:03.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p><table><thead><tr><th style="text-align:left">目录</th><th style="text-align:left">含义</th></tr></thead><tbody><tr><td style="text-align:left">.</td><td style="text-align:left">代表此层目录</td></tr><tr><td style="text-align:left">..</td><td style="text-align:left">代表上一层目录</td></tr><tr><td style="text-align:left">-</td><td style="text-align:left">代表前一个工作目录</td></tr><tr><td style="text-align:left">~</td><td style="text-align:left">代表【目前用户身份】所在的家目录</td></tr><tr><td style="text-align:left">~arieltian</td><td style="text-align:left">代表 arieltian 这个用户的家目录</td></tr></tbody></table><p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了解下几个常见的目录操作指令</p><ul><li>cd：变换目录</li><li>pwd：显示当前目录</li><li>mkdir：建立一个新的目录</li><li>rmdir：删除一个空目录</li></ul>]]></content>
     
