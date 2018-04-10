@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Linux学习笔记二：文件与目录管理]]></title>
     <url>%2F2018%2F03%2F29%2FLinux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%2F</url>
-    <content type="text"><![CDATA[目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海： 目录 含义 . 代表此层目录 .. 代表上一层目录 - 代表前一个工作目录 ~ 代表【目前用户身份】所在的家目录 ~arieltian 代表 arieltian 这个用户的家目录 需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了解下几个常见的目录操作指令 cd：变换目录 pwd：显示当前目录 mkdir：建立一个新的目录 rmdir：删除一个空目录]]></content>
+    <content type="text"><![CDATA[目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海： 目录 含义 . 代表此层目录 .. 代表上一层目录 - 代表前一个工作目录 ~ 代表【目前用户身份】所在的家目录 ~arieltian 代表 arieltian 这个用户的家目录 需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个常见的目录操作指令 cd：变换目录 pwd：显示当前目录 mkdir：建立一个新的目录 rmdir：删除一个空目录 cd(change directory)用来切换工作目录的指令。结合上文讲到的目录及含义和相对路径与绝对路径，相信大家能够轻松的进行目录切换了。 pwd(print working directory)显示当前工作目录，该指令有可选参数：[-P]，使用该参数后，显示的是当前确切路径，而非链接(link)路径。如下图，/var/log是链接文档，链接到/private/var/log mkdir(make directory)建立新目录，有可选参数[-mp]，-m配置文件目录的权限，-p可直接递归创建目录（预设情况下，所需目录得一层一层创建）。 rmdir(remove directory)删除空目录，有可选参数[-p]，-p可递归删除层级目录。需要注意的是，rmdir仅可删除空目录，当目标目录存在下级目录或文件时，该指令会执行失败，如果要强制删除目标目录以及该目录下的所有目录/文件，可使用【rm -r 目标目录】指令]]></content>
       <categories>
         <category>Linux</category>
       </categories>

@@ -394,8 +394,7 @@
 
       
         
-          
-            <h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p>
+          <h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p>
 <table>
 <thead>
 <tr>
@@ -426,15 +425,22 @@
 </tr>
 </tbody>
 </table>
-<p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了解下几个常见的目录操作指令</p>
+<p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层<code>..</code>和根目录自己<code>.</code>是同一个目录。然后再了解下几个常见的目录操作指令</p>
 <ul>
 <li>cd：变换目录</li>
 <li>pwd：显示当前目录</li>
 <li>mkdir：建立一个新的目录</li>
 <li>rmdir：删除一个空目录</li>
 </ul>
-
-          
+<h3 id="cd-change-directory"><a href="#cd-change-directory" class="headerlink" title="cd(change directory)"></a>cd(change directory)</h3><p>用来切换工作目录的指令。结合上文讲到的<code>目录及含义</code>和<code>相对路径与绝对路径</code>，相信大家能够轻松的进行目录切换了。</p>
+<h3 id="pwd-print-working-directory"><a href="#pwd-print-working-directory" class="headerlink" title="pwd(print working directory)"></a>pwd(print working directory)</h3><p>显示当前工作目录，该指令有可选参数：[-P]，使用该参数后，显示的是当前确切路径，而非链接(link)路径。如下图，/var/log是链接文档，链接到/private/var/log<br><img src="/images/linux-directory/pwd.png" alt="显示当前工作目录"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/03/29/Linux学习笔记二：文件与目录管理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

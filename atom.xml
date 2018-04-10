@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-10T02:14:07.000Z</updated>
+  <updated>2018-04-10T03:36:16.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,52 @@
     <link href="http://yoursite.com/2018/03/29/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%8C%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/"/>
     <id>http://yoursite.com/2018/03/29/Linux学习笔记二：文件与目录管理/</id>
     <published>2018-03-29T07:01:58.000Z</published>
-    <updated>2018-04-10T02:14:07.000Z</updated>
+    <updated>2018-04-10T03:36:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p><table><thead><tr><th style="text-align:left">目录</th><th style="text-align:left">含义</th></tr></thead><tbody><tr><td style="text-align:left">.</td><td style="text-align:left">代表此层目录</td></tr><tr><td style="text-align:left">..</td><td style="text-align:left">代表上一层目录</td></tr><tr><td style="text-align:left">-</td><td style="text-align:left">代表前一个工作目录</td></tr><tr><td style="text-align:left">~</td><td style="text-align:left">代表【目前用户身份】所在的家目录</td></tr><tr><td style="text-align:left">~arieltian</td><td style="text-align:left">代表 arieltian 这个用户的家目录</td></tr></tbody></table><p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层（..）和根目录自己（.）是同一个目录。然后再了解下几个常见的目录操作指令</p><ul><li>cd：变换目录</li><li>pwd：显示当前目录</li><li>mkdir：建立一个新的目录</li><li>rmdir：删除一个空目录</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="目录与路径"><a href="#目录与路径" class="headerlink" title="目录与路径"></a>目录与路径</h1><h2 id="目录的相关操作"><a href="#目录的相关操作" class="headerlink" title="目录的相关操作"></a>目录的相关操作</h2><p>首先介绍一下比较特殊的目录，需要牢记脑海：</p><table><thead><tr><th style="text-align:left">目录</th><th style="text-align:left">含义</th></tr></thead><tbody><tr><td style="text-align:left">.</td><td style="text-align:left">代表此层目录</td></tr><tr><td style="text-align:left">..</td><td style="text-align:left">代表上一层目录</td></tr><tr><td style="text-align:left">-</td><td style="text-align:left">代表前一个工作目录</td></tr><tr><td style="text-align:left">~</td><td style="text-align:left">代表【目前用户身份】所在的家目录</td></tr><tr><td style="text-align:left">~arieltian</td><td style="text-align:left">代表 arieltian 这个用户的家目录</td></tr></tbody></table><p>需要注意的是：<strong>在所有目录底下都会存在<code>.</code>和<code>..</code>两个目录</strong>，根目录的上一层<code>..</code>和根目录自己<code>.</code>是同一个目录。然后再了解下几个常见的目录操作指令</p><ul><li>cd：变换目录</li><li>pwd：显示当前目录</li><li>mkdir：建立一个新的目录</li><li>rmdir：删除一个空目录</li></ul><h3 id="cd-change-directory"><a href="#cd-change-directory" class="headerlink" title="cd(change directory)"></a>cd(change directory)</h3><p>用来切换工作目录的指令。结合上文讲到的<code>目录及含义</code>和<code>相对路径与绝对路径</code>，相信大家能够轻松的进行目录切换了。</p><h3 id="pwd-print-working-directory"><a href="#pwd-print-working-directory" class="headerlink" title="pwd(print working directory)"></a>pwd(print working directory)</h3><p>显示当前工作目录，该指令有可选参数：[-P]，使用该参数后，显示的是当前确切路径，而非链接(link)路径。如下图，/var/log是链接文档，链接到/private/var/log<br><img src="/images/linux-directory/pwd.png" alt="显示当前工作目录"></p><a id="more"></a><h3 id="mkdir-make-directory"><a href="#mkdir-make-directory" class="headerlink" title="mkdir(make directory)"></a>mkdir(make directory)</h3><p>建立新目录，有可选参数[-mp]，<code>-m</code>配置文件目录的权限，<code>-p</code>可直接递归创建目录（预设情况下，所需目录得一层一层创建）。<br><img src="/images/linux-directory/mkdir.png" alt="创建新目录"></p><h3 id="rmdir-remove-directory"><a href="#rmdir-remove-directory" class="headerlink" title="rmdir(remove directory)"></a>rmdir(remove directory)</h3><p>删除空目录，有可选参数[-p]，<code>-p</code>可递归删除层级目录。需要注意的是，<strong>rmdir仅可删除空目录，当目标目录存在下级目录或文件时，该指令会执行失败，如果要强制删除目标目录以及该目录下的所有目录/文件，可使用【rm -r 目标目录】指令</strong><br><img src="/images/linux-directory/rmdir.png" alt="删除空目录"></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;目录与路径&quot;&gt;&lt;a href=&quot;#目录与路径&quot; class=&quot;headerlink&quot; title=&quot;目录与路径&quot;&gt;&lt;/a&gt;目录与路径&lt;/h1&gt;&lt;h2 id=&quot;目录的相关操作&quot;&gt;&lt;a href=&quot;#目录的相关操作&quot; class=&quot;headerlink&quot; title=
-      
+      &lt;h1 id=&quot;目录与路径&quot;&gt;&lt;a href=&quot;#目录与路径&quot; class=&quot;headerlink&quot; title=&quot;目录与路径&quot;&gt;&lt;/a&gt;目录与路径&lt;/h1&gt;&lt;h2 id=&quot;目录的相关操作&quot;&gt;&lt;a href=&quot;#目录的相关操作&quot; class=&quot;headerlink&quot; title=&quot;目录的相关操作&quot;&gt;&lt;/a&gt;目录的相关操作&lt;/h2&gt;&lt;p&gt;首先介绍一下比较特殊的目录，需要牢记脑海：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;目录&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;.&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;代表此层目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;..&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;代表上一层目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;-&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;代表前一个工作目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;~&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;代表【目前用户身份】所在的家目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;~arieltian&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;代表 arieltian 这个用户的家目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;需要注意的是：&lt;strong&gt;在所有目录底下都会存在&lt;code&gt;.&lt;/code&gt;和&lt;code&gt;..&lt;/code&gt;两个目录&lt;/strong&gt;，根目录的上一层&lt;code&gt;..&lt;/code&gt;和根目录自己&lt;code&gt;.&lt;/code&gt;是同一个目录。然后再了解下几个常见的目录操作指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cd：变换目录&lt;/li&gt;
+&lt;li&gt;pwd：显示当前目录&lt;/li&gt;
+&lt;li&gt;mkdir：建立一个新的目录&lt;/li&gt;
+&lt;li&gt;rmdir：删除一个空目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;cd-change-directory&quot;&gt;&lt;a href=&quot;#cd-change-directory&quot; class=&quot;headerlink&quot; title=&quot;cd(change directory)&quot;&gt;&lt;/a&gt;cd(change directory)&lt;/h3&gt;&lt;p&gt;用来切换工作目录的指令。结合上文讲到的&lt;code&gt;目录及含义&lt;/code&gt;和&lt;code&gt;相对路径与绝对路径&lt;/code&gt;，相信大家能够轻松的进行目录切换了。&lt;/p&gt;
+&lt;h3 id=&quot;pwd-print-working-directory&quot;&gt;&lt;a href=&quot;#pwd-print-working-directory&quot; class=&quot;headerlink&quot; title=&quot;pwd(print working directory)&quot;&gt;&lt;/a&gt;pwd(print working directory)&lt;/h3&gt;&lt;p&gt;显示当前工作目录，该指令有可选参数：[-P]，使用该参数后，显示的是当前确切路径，而非链接(link)路径。如下图，/var/log是链接文档，链接到/private/var/log&lt;br&gt;&lt;img src=&quot;/images/linux-directory/pwd.png&quot; alt=&quot;显示当前工作目录&quot;&gt;&lt;/p&gt;
     
     </summary>
     
