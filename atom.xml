@@ -441,16 +441,16 @@
   
   <entry>
     <title>Linux下查找包含指定内容的文件</title>
-    <link href="http://yoursite.com/2017/11/30/Linux/"/>
-    <id>http://yoursite.com/2017/11/30/Linux/</id>
+    <link href="http://yoursite.com/2017/11/30/Linux-find/"/>
+    <id>http://yoursite.com/2017/11/30/Linux-find/</id>
     <published>2017-11-29T16:00:00.000Z</published>
-    <updated>2018-04-10T06:28:29.000Z</updated>
+    <updated>2018-04-10T06:38:48.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/2017-11-30-Linux/1.png" alt="问题样式"></p><p>嗯，可以准备下手修改样式了！but……这个样式表在哪里？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了<br><a id="more"></a></p><h2 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：其中<code>|</code>表示将上一次的<code>find</code>指令执行得到的结果交由下一个指令继续执行。执行该完整指令，good，找到了一大堆文件：<br><img src="/images/2017-11-30-Linux/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p><h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux.md</strong>，然后<code>cat xx.md &gt; Linux.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="需求背景"><a href="#需求背景" class="headerlink" title="需求背景"></a>需求背景</h2><p>在<code>hexo</code>上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：<br><img src="/images/2017-11-30-Linux-find/1.png" alt="问题样式"></p><p>嗯，可以准备下手修改样式了！but……这个样式表在哪里？翻遍了文件夹都没找到对应的这个<code>main.css</code>啊！没关系，接下来该我们本文的主角出场了<br><a id="more"></a></p><h2 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h2><p>以本人对Linux模糊的记忆，搜索到了强悍的find命令<code>find .|xargs grep -ri &quot;xxx&quot;</code>：其中<code>|</code>表示将上一次的<code>find</code>指令执行得到的结果交由下一个指令继续执行。执行该完整指令，good，找到了一大堆文件：<br><img src="/images/2017-11-30-Linux-find/2.png" alt="find"><br>修改样式，上传，查看blog样式，perfect，手工！</p><h2 id="小插曲"><a href="#小插曲" class="headerlink" title="小插曲"></a>小插曲</h2><p>为了省去本文的标题、分类、标签等一系列配置，我打算直接复用上一篇文章的配置。这样的话我首先用<code>vim</code>命令新建了该文章的文件<strong>Linux.md</strong>，然后<code>cat xx.md &gt; Linux.md</code>把<strong>xx</strong>文件的内容复制到了该文件</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需求背景&quot;&gt;&lt;a href=&quot;#需求背景&quot; class=&quot;headerlink&quot; title=&quot;需求背景&quot;&gt;&lt;/a&gt;需求背景&lt;/h2&gt;&lt;p&gt;在&lt;code&gt;hexo&lt;/code&gt;上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：&lt;br&gt;&lt;img src=&quot;/images/2017-11-30-Linux/1.png&quot; alt=&quot;问题样式&quot;&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;需求背景&quot;&gt;&lt;a href=&quot;#需求背景&quot; class=&quot;headerlink&quot; title=&quot;需求背景&quot;&gt;&lt;/a&gt;需求背景&lt;/h2&gt;&lt;p&gt;在&lt;code&gt;hexo&lt;/code&gt;上发布第一篇文章之后，对文章进行了分类和打标，当我点击分类标签查看该下面的文章是，惊奇的发现分类的样式有点小瑕疵。你知道的，强迫症肯定受不了，于是……审查元素，想对不满意的地方进行样式调整。OK，成功找到有问题的样式标签，如图：&lt;br&gt;&lt;img src=&quot;/images/2017-11-30-Linux-find/1.png&quot; alt=&quot;问题样式&quot;&gt;&lt;/p&gt;
 &lt;p&gt;嗯，可以准备下手修改样式了！but……这个样式表在哪里？翻遍了文件夹都没找到对应的这个&lt;code&gt;main.css&lt;/code&gt;啊！没关系，接下来该我们本文的主角出场了&lt;br&gt;
     
     </summary>
