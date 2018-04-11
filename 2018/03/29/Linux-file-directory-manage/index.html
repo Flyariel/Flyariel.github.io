@@ -131,7 +131,11 @@
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/mkdir.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/rmdir.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/$PATH.png">
-<meta property="og:updated_time" content="2018-04-11T01:17:16.000Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/cp.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/rm.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/mv.png">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/basename.png">
+<meta property="og:updated_time" content="2018-04-11T03:16:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
@@ -505,7 +509,104 @@
 </tr>
 </tbody>
 </table>
-<h2 id="复制、删除与移动：cp、rm、mv"><a href="#复制、删除与移动：cp、rm、mv" class="headerlink" title="复制、删除与移动：cp、rm、mv"></a>复制、删除与移动：cp、rm、mv</h2>
+<h2 id="复制、删除与移动：cp、rm、mv"><a href="#复制、删除与移动：cp、rm、mv" class="headerlink" title="复制、删除与移动：cp、rm、mv"></a>复制、删除与移动：cp、rm、mv</h2><h3 id="cp（复制文件或目录）"><a href="#cp（复制文件或目录）" class="headerlink" title="cp（复制文件或目录）"></a>cp（复制文件或目录）</h3><p>其指令格式为<code>cp [-adfilprsu] source(来源文件) destination(目标文件)</code>，不同身份的用户执行该指令会有不同的结果产生。cp指令可附加的选项与参数如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">相当于 -dr –preserve=all的意思，dr请参考下列说明</td>
+</tr>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">若来源文件为链接文件的属性，则复制链接文件属性而非文件本身</td>
+</tr>
+<tr>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">为强制（force）的意思，若目标文件已经存在且无法开启，则移除后再尝试一次</td>
+</tr>
+<tr>
+<td style="text-align:left">-i</td>
+<td style="text-align:left">若目标文件已经存在时，在覆盖时会先询问动作的进行</td>
+</tr>
+<tr>
+<td style="text-align:left">-l</td>
+<td style="text-align:left">进行硬式连结的连接档建立，而非复制文件本身</td>
+</tr>
+<tr>
+<td style="text-align:left">-p</td>
+<td style="text-align:left">连同文件的属性一起复制过去，而非使用默认属性</td>
+</tr>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">递归持续复制，用于目录的复制行为</td>
+</tr>
+<tr>
+<td style="text-align:left">-s</td>
+<td style="text-align:left">复制成为富豪链接文件，亦即[快捷方式]文件</td>
+</tr>
+<tr>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">destination比source 旧才更新destination，或destination不存在才复制</td>
+</tr>
+</tbody>
+</table>
+<p>需要注意的是：<strong>在预设条件中，cp的来源文件与目标文件的权限是不同的，目标文件的拥有者通常是指令执行者本身</strong>，因此当我们进行备份的时候，一些特殊权限的文件（比如密码文件/etc/sahdow）以及一些配置文件，就需要加上-a或者-p等可以完整复制文件权限的选项才行。来看看实际应用：<br><img src="/images/2018-03-29-Linux-file-directory-manage/cp.png" alt="cp"><br>由于arieltian的身份并不能随意修改文件的拥有者与群组，因此即使加上 -a 选项，也只能复制源文件的相关权限与时间等属性，而不能复制与拥有者、群组相关的权限的。</p>
+<h3 id="rm（移除文件或目录）"><a href="#rm（移除文件或目录）" class="headerlink" title="rm（移除文件或目录）"></a>rm（移除文件或目录）</h3><p>指令格式为<code>rm [-fir] 文件或目录</code>，可选参数如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">为force的意思，忽略不存在的文件，不会出现警告信息</td>
+</tr>
+<tr>
+<td style="text-align:left">-i</td>
+<td style="text-align:left">在删除前会询问使用者是否执行</td>
+</tr>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">递归删除，常用于目录的删除</td>
+</tr>
+</tbody>
+</table>
+<p>来看看实际应用：<br><img src="/images/2018-03-29-Linux-file-directory-manage/rm.png" alt="rm"></p>
+<h3 id="mv（移动文件与目录，或重命名）"><a href="#mv（移动文件与目录，或重命名）" class="headerlink" title="mv（移动文件与目录，或重命名）"></a>mv（移动文件与目录，或重命名）</h3><p>指令格式为<code>mv [-fiu] 文件或目录</code>，可选参数如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-f</td>
+<td style="text-align:left">为force的意思，若目标文件已存在，不会询问而直接覆盖</td>
+</tr>
+<tr>
+<td style="text-align:left">-i</td>
+<td style="text-align:left">若目标文件已存在，会询问是否覆盖</td>
+</tr>
+<tr>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">若目标文件已存在，且source比较新才更新目标文件</td>
+</tr>
+</tbody>
+</table>
+<p>实际应用如下：<br><img src="/images/2018-03-29-Linux-file-directory-manage/mv.png" alt="mv"></p>
+<h2 id="获取路径的文件名与目录名"><a href="#获取路径的文件名与目录名" class="headerlink" title="获取路径的文件名与目录名"></a>获取路径的文件名与目录名</h2><p>一个文件的完整档名包含前面的目录与最终的文件名，在shell script之类的程序中，怎么知道某个完整档名里，哪部分是档名，哪部分是目录名呢？以一个范例来看看basename与dirname的用途：<br><img src="/images/2018-03-29-Linux-file-directory-manage/basename.png" alt="basename"></p>
+
       
     </div>
     
@@ -746,7 +847,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录与路径"><span class="nav-number">1.</span> <span class="nav-text">目录与路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录的相关操作"><span class="nav-number">1.1.</span> <span class="nav-text">目录的相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cd-change-directory"><span class="nav-number">1.1.1.</span> <span class="nav-text">cd(change directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd-print-working-directory"><span class="nav-number">1.1.2.</span> <span class="nav-text">pwd(print working directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-make-directory"><span class="nav-number">1.1.3.</span> <span class="nav-text">mkdir(make directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rmdir-remove-directory"><span class="nav-number">1.1.4.</span> <span class="nav-text">rmdir(remove directory)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行文件路径的变量：-PATH"><span class="nav-number">1.2.</span> <span class="nav-text">执行文件路径的变量：$PATH</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录的检视：ls"><span class="nav-number">2.1.</span> <span class="nav-text">文件与目录的检视：ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制、删除与移动：cp、rm、mv"><span class="nav-number">2.2.</span> <span class="nav-text">复制、删除与移动：cp、rm、mv</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录与路径"><span class="nav-number">1.</span> <span class="nav-text">目录与路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#目录的相关操作"><span class="nav-number">1.1.</span> <span class="nav-text">目录的相关操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cd-change-directory"><span class="nav-number">1.1.1.</span> <span class="nav-text">cd(change directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd-print-working-directory"><span class="nav-number">1.1.2.</span> <span class="nav-text">pwd(print working directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-make-directory"><span class="nav-number">1.1.3.</span> <span class="nav-text">mkdir(make directory)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rmdir-remove-directory"><span class="nav-number">1.1.4.</span> <span class="nav-text">rmdir(remove directory)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#执行文件路径的变量：-PATH"><span class="nav-number">1.2.</span> <span class="nav-text">执行文件路径的变量：$PATH</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录的检视：ls"><span class="nav-number">2.1.</span> <span class="nav-text">文件与目录的检视：ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制、删除与移动：cp、rm、mv"><span class="nav-number">2.2.</span> <span class="nav-text">复制、删除与移动：cp、rm、mv</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cp（复制文件或目录）"><span class="nav-number">2.2.1.</span> <span class="nav-text">cp（复制文件或目录）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm（移除文件或目录）"><span class="nav-number">2.2.2.</span> <span class="nav-text">rm（移除文件或目录）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv（移动文件与目录，或重命名）"><span class="nav-number">2.2.3.</span> <span class="nav-text">mv（移动文件与目录，或重命名）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取路径的文件名与目录名"><span class="nav-number">2.3.</span> <span class="nav-text">获取路径的文件名与目录名</span></a></li></ol></li></ol></div>
             
 
           </div>
