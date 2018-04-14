@@ -135,7 +135,7 @@
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/rm.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/mv.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/basename.png">
-<meta property="og:updated_time" content="2018-04-13T10:42:15.000Z">
+<meta property="og:updated_time" content="2018-04-14T11:56:00.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
@@ -607,7 +607,7 @@
 <p>实际应用如下：<br><img src="/images/2018-03-29-Linux-file-directory-manage/mv.png" alt="mv"></p>
 <h2 id="获取路径的文件名与目录名"><a href="#获取路径的文件名与目录名" class="headerlink" title="获取路径的文件名与目录名"></a>获取路径的文件名与目录名</h2><p>一个文件的完整档名包含前面的目录与最终的文件名，在shell script之类的程序中，怎么知道某个完整档名里，哪部分是档名，哪部分是目录名呢？以一个范例来看看basename与dirname的用途：<br><img src="/images/2018-03-29-Linux-file-directory-manage/basename.png" alt="basename"></p>
 <h1 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h1><h2 id="直接检视文件内容"><a href="#直接检视文件内容" class="headerlink" title="直接检视文件内容"></a>直接检视文件内容</h2><p>直接查阅一个文件的内容可以使用cat/tac/nl 这几个指令，每个指令代表的意思和可选参数如下：</p>
-<p>cat [-AbEnTv]</p>
+<p><strong>cat [-AbEnTv]</strong></p>
 <table>
 <thead>
 <tr>
@@ -642,8 +642,8 @@
 </tr>
 </tbody>
 </table>
-<p>tac (反向列式)：与cat指令功能相反，执行该指令会反向输出文件内容</p>
-<p>nl [-bnw]（添加行号打印）</p>
+<p><strong>tac (反向列式)</strong>：与cat指令功能相反，执行该指令会反向输出文件内容</p>
+<p><strong>nl [-bnw]（添加行号打印）</strong></p>
 <table>
 <thead>
 <tr>
