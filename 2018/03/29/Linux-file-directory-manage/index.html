@@ -138,7 +138,8 @@
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/more.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/head.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/tail.png">
-<meta property="og:updated_time" content="2018-04-16T15:13:55.772Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/od.png">
+<meta property="og:updated_time" content="2018-04-17T01:32:46.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
@@ -697,7 +698,42 @@
 <blockquote>
 <p>tail指令加上-f 参数之后，表示持续侦测指定文件的内容，程序员们常用该指令监控日志哟，想要离开持续侦测模式，只需Ctrl+c即可。</p>
 </blockquote>
-<h2 id="非文本文档的内容检视"><a href="#非文本文档的内容检视" class="headerlink" title="非文本文档的内容检视"></a>非文本文档的内容检视</h2><p>上面提到的文件内容查阅的相关指令，都是基于纯文本文档的。如果要查阅非文本文档内容，可以使用od指令来实现我们的需求。指令格式为<code>od [-t TYPE] 文件</code></p>
+<h2 id="非文本文档的内容检视"><a href="#非文本文档的内容检视" class="headerlink" title="非文本文档的内容检视"></a>非文本文档的内容检视</h2><p>上面提到的文件内容查阅的相关指令，都是基于纯文本文档的。如果要查阅非文本文档内容，可以使用od指令来实现我们的需求。指令格式为<code>od [-t TYPE] 文件</code>，-t后面可以接各种类型（TYPE）的输出：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">a</td>
+<td style="text-align:left">利用默认字符输出</td>
+</tr>
+<tr>
+<td style="text-align:left">c</td>
+<td style="text-align:left">使用ASCII字符输出</td>
+</tr>
+<tr>
+<td style="text-align:left">d</td>
+<td style="text-align:left">利用十进制输出数据</td>
+</tr>
+<tr>
+<td style="text-align:left">f</td>
+<td style="text-align:left">利用浮点数输出数据</td>
+</tr>
+<tr>
+<td style="text-align:left">o</td>
+<td style="text-align:left">利用八进制输出数据</td>
+</tr>
+<tr>
+<td style="text-align:left">x</td>
+<td style="text-align:left">利用十六进制输出数据</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/2018-03-29-Linux-file-directory-manage/od.png" alt="od"></p>
 
       
     </div>
