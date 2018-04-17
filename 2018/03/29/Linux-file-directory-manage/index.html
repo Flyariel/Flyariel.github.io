@@ -140,7 +140,8 @@
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/tail.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/od.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/touch.png">
-<meta property="og:updated_time" content="2018-04-17T02:46:45.111Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/which.png">
+<meta property="og:updated_time" content="2018-04-17T14:06:20.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
@@ -778,7 +779,22 @@
 </table>
 <p><img src="/images/2018-03-29-Linux-file-directory-manage/touch.png" alt="touch"></p>
 <h1 id="指令与文件的搜索"><a href="#指令与文件的搜索" class="headerlink" title="指令与文件的搜索"></a>指令与文件的搜索</h1><p>我们常常需要知道某个文件在系统中的具体存放路径，在Linux系统中，可以使用<code>which、whereis、locate/updatedb、find</code>指令查找文件的路径</p>
-<h2 id="脚本文件的搜索"><a href="#脚本文件的搜索" class="headerlink" title="脚本文件的搜索"></a>脚本文件的搜索</h2><p>可能你已经知道，在终端里，连续按下两次 [tab] 键就能知道有多少指令可以使用，但知道这些指令存放在哪个位置么？比如常用的ls指令，如果不熟悉Linux的目录结构（可参考该博客网址中介绍Linux目录结构的文章），可以使用<code>which</code>指令查找哟：  </p>
+<h2 id="脚本文件的搜索"><a href="#脚本文件的搜索" class="headerlink" title="脚本文件的搜索"></a>脚本文件的搜索</h2><p>可能你已经知道，在终端里，连续按下两次 [tab] 键就能知道有多少指令可以使用，但知道这些指令存放在哪个位置么？比如常用的ls指令，如果不熟悉Linux的目录结构（可参考该博客网址中介绍Linux目录结构的文章），可以使用<code>which [-a] command</code>指令查找哟：  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">将所有由PATH目录中可以找到的指令均列出，而不止第一个被找到的指令名称</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/2018-03-29-Linux-file-directory-manage/which.png" alt="which"></p>
 
       
     </div>
