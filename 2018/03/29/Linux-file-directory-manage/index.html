@@ -139,7 +139,8 @@
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/head.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/tail.png">
 <meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/od.png">
-<meta property="og:updated_time" content="2018-04-17T01:55:22.340Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-03-29-Linux-file-directory-manage/touch.png">
+<meta property="og:updated_time" content="2018-04-17T02:26:18.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
@@ -738,7 +739,45 @@
 </tbody>
 </table>
 <p><img src="/images/2018-03-29-Linux-file-directory-manage/od.png" alt="od"></p>
-<h2 id="修改文件事件或新建文档"><a href="#修改文件事件或新建文档" class="headerlink" title="修改文件事件或新建文档"></a>修改文件事件或新建文档</h2>
+<h2 id="修改文件事件或新建文档"><a href="#修改文件事件或新建文档" class="headerlink" title="修改文件事件或新建文档"></a>修改文件事件或新建文档</h2><p>前面在介绍ls指令时，有提到过Linux系统中每个文件会记录许多时间参数，其中有三个主要的变动时间：</p>
+<ul>
+<li>mtime：文件内容发生改变时，会更新该时间</li>
+<li>ctime：文件状态（比如权限/属性）发生改变时，更新该时间</li>
+<li>atime：文件内容被读取时（比如使用cat指令读取某个文件内容），更新该时间</li>
+</ul>
+<p>当某个文件的上述时间参数异常时，可以使用<strong><code>touch</code></strong>指令更新该文件的时间参数：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">修改atime为当前时间</td>
+</tr>
+<tr>
+<td style="text-align:left">-c</td>
+<td style="text-align:left">仅修改文件的时间，若该文件不存在则不建立新文件</td>
+</tr>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">后接想要更新的日期（而不是更新为当前日期）</td>
+</tr>
+<tr>
+<td style="text-align:left">-m</td>
+<td style="text-align:left">仅修改mtime为当前时间</td>
+</tr>
+<tr>
+<td style="text-align:left">-t</td>
+<td style="text-align:left">后接想要更新的时间（而不是更新为当前时间）</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/2018-03-29-Linux-file-directory-manage/touch.png" alt="touch"></p>
+
       
     </div>
     
