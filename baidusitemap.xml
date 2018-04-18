@@ -5,11 +5,31 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/29/Linux-file-directory-manage/</loc>
-    <lastmod>2018-04-17T14:39:54.000Z</lastmod>
+    <lastmod>2018-04-18T14:39:27.946Z</lastmod>
     <data>
         <display>
         <title>Linux学习笔记二：文件与目录管理</title>
         <pubTime>2018-03-29T07:01:58.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/01/17/Linux-file-directory-config/</loc>
+    <lastmod>2018-04-18T14:37:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux学习笔记一：文件权限与目录配置</title>
+        <pubTime>2018-01-17T13:37:47.000Z</pubTime>
         
         <tag>Linux</tag>
          
@@ -70,26 +90,6 @@
         <display>
         <title>线上问题日志定位手段</title>
         <pubTime>2017-11-30T03:50:30.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/01/17/Linux-file-directory-config/</loc>
-    <lastmod>2018-04-10T06:25:20.239Z</lastmod>
-    <data>
-        <display>
-        <title>Linux学习笔记一：文件权限与目录配置</title>
-        <pubTime>2018-01-17T13:37:47.000Z</pubTime>
         
         <tag>Linux</tag>
          
