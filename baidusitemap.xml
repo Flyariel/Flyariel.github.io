@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/30/Linux-find/</loc>
+    <lastmod>2018-04-22T06:22:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux下查找包含指定内容的文件</title>
+        <pubTime>2017-11-29T16:00:00.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/29/Linux-file-directory-manage/</loc>
-    <lastmod>2018-04-18T14:44:23.000Z</lastmod>
+    <lastmod>2018-04-22T06:20:11.000Z</lastmod>
     <data>
         <display>
         <title>Linux学习笔记二：文件与目录管理</title>
@@ -57,26 +77,6 @@
            
              
               <breadCrumb title="ES6" url="http://yoursite.com/categories/ES6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/30/Linux-find/</loc>
-    <lastmod>2018-04-10T07:07:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux下查找包含指定内容的文件</title>
-        <pubTime>2017-11-29T16:00:00.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
           
         </display>
     </data>
