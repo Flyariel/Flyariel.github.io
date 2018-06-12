@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/11/30/Linux-find/</loc>
+    <loc>http://yoursite.com/2018/06/12/graphical-http/</loc>
     
-    <lastmod>2018-04-22T06:22:40.000Z</lastmod>
+    <lastmod>2018-06-12T08:18:56.064Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2018/03/29/Linux-file-directory-manage/</loc>
     
-    <lastmod>2018-04-22T06:20:11.000Z</lastmod>
+    <lastmod>2018-04-22T07:07:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/11/30/Linux-find/</loc>
+    
+    <lastmod>2018-04-22T06:24:02.000Z</lastmod>
     
   </url>
   

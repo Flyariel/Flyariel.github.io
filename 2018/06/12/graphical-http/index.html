@@ -106,7 +106,7 @@
 
 
 
-  <meta name="keywords" content="webpack," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -119,21 +119,17 @@
 
 
 
-<meta name="description" content="问题描述今天webpack部署新接手的项目的时候，npm install 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
-<meta name="keywords" content="webpack">
+<meta name="description" content="沉迷卡农无法自拔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack部署过程中遇到的问题">
-<meta property="og:url" content="http://yoursite.com/2017/12/05/webpack-config/index.html">
+<meta property="og:title" content="初识http协议">
+<meta property="og:url" content="http://yoursite.com/2018/06/12/graphical-http/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="问题描述今天webpack部署新接手的项目的时候，npm install 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
+<meta property="og:description" content="沉迷卡农无法自拔">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/2017-12-05-webpack-config/webpack-error-1.png">
-<meta property="og:image" content="http://yoursite.com/images/2017-12-05-webpack-config/webpack-error-2.png">
-<meta property="og:updated_time" content="2018-04-10T06:20:58.000Z">
+<meta property="og:updated_time" content="2018-06-12T08:18:56.064Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack部署过程中遇到的问题">
-<meta name="twitter:description" content="问题描述今天webpack部署新接手的项目的时候，npm install 好像加载不了package.json里面指定的依赖包！以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……">
-<meta name="twitter:image" content="http://yoursite.com/images/2017-12-05-webpack-config/webpack-error-1.png">
+<meta name="twitter:title" content="初识http协议">
+<meta name="twitter:description" content="沉迷卡农无法自拔">
 
 
 
@@ -163,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/05/webpack-config/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/12/graphical-http/"/>
 
 
 
 
 
-  <title>webpack部署过程中遇到的问题 | Ariel's Blog</title>
+  <title>初识http协议 | Ariel's Blog</title>
   
 
 
@@ -306,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/05/webpack-config/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/12/graphical-http/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -323,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webpack部署过程中遇到的问题</h1>
+          <h1 class="post-title" itemprop="name headline">初识http协议</h1>
         
 
         <div class="post-meta">
@@ -335,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-05T17:39:11+08:00">
-                2017-12-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-12T16:12:32+08:00">
+                2018-06-12
               </time>
             
 
@@ -345,28 +341,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/webpack/" itemprop="url" rel="index">
-                    <span itemprop="name">webpack</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -395,13 +369,7 @@
       
 
       
-        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>今天webpack部署新接手的项目的时候，<code>npm install</code> 好像加载不了<code>package.json</code>里面指定的依赖包！<br><img src="/images/2017-12-05-webpack-config/webpack-error-1.png" alt="问题样式"><br>以至于项目在编译过程中有些静态资源文件不能require，翻阅各种文档，均不能解决，头疼……<br><a id="more"></a></p>
-<h2 id="暂时解决方案"><a href="#暂时解决方案" class="headerlink" title="暂时解决方案"></a>暂时解决方案</h2><p>从其他同事处拷贝了安装好的依赖包，放到项目代码中<br>依然有问题，because……同事的操作系统是Windows，所以拷贝之后，依然有些包不能用：<br><img src="/images/2017-12-05-webpack-config/webpack-error-2.png" alt="问题样式"><br>根据报错提示命令执行，终于解决：</p>
-<blockquote>
-<p>暂时留坑在这里，等调试完项目之后再来回顾该问题 /(ㄒoㄒ)/~~</p>
-</blockquote>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>终于想起还有这个坑没填……依赖包安装不上完全是因为那些包都是私有包的问题……</p>
-
+        
       
     </div>
     
@@ -416,12 +384,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/webpack/" rel="tag"># webpack</a>
-          
-        </div>
-      
 
       
       
@@ -431,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/01/MacOS-Apache/" rel="next" title="MacOS 下配置Apache本地域名服务器">
-                <i class="fa fa-chevron-left"></i> MacOS 下配置Apache本地域名服务器
+              <a href="/2018/03/29/Linux-file-directory-manage/" rel="next" title="Linux学习笔记二：文件与目录管理">
+                <i class="fa fa-chevron-left"></i> Linux学习笔记二：文件与目录管理
               </a>
             
           </div>
@@ -440,10 +402,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/27/Vue-component-communication/" rel="prev" title="Vue学习笔记之父子组件通信">
-                Vue学习笔记之父子组件通信 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,17 +453,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -636,22 +585,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#暂时解决方案"><span class="nav-number">2.</span> <span class="nav-text">暂时解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更新"><span class="nav-number">3.</span> <span class="nav-text">更新</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
