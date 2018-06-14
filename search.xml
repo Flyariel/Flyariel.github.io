@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSS简单实现子元素两端对齐]]></title>
+    <url>%2F2018%2F06%2F14%2Fchild-element-justified%2F</url>
+    <content type="text"><![CDATA[本文背景作为一个前端开发，CSS一直是自己的薄弱技术点，昨天遇到一个日常切图需求，让自己再次意识到CSS层面真是快烂到无可救药了。所以开本文记录下日常需求中遇到的CSS问题，希望自己在该层面有个积累 需求描述一个简单的子元素两端对齐，设计稿如下 实现思路子元素属性设置display:block，加上浮动属性float:left，父元素总宽度减去子元素总宽度之后，均分剩余宽度到子元素的margin-left属性上，这样设置之后最左侧的子元素因为存在margin-left值，导致视觉上没有两端对齐，这时候通过给父元素margin-left设置负值消除视觉偏移值，达到两端对齐的效果。 代码示例1234567891011121314151617181920&lt;p class="tips"&gt;产品方向&lt;/p&gt;&lt;ul&gt; &lt;c:for var="direction" list="$&#123;4&#125;"&gt; &lt;li data-directionId="" class="$&#123;for.index === 1 ? 'active':''&#125;"&gt;电商平台&lt;/li&gt; &lt;/c:for&gt;&lt;/ul&gt;&lt;p class="tips"&gt;产品形态&lt;/p&gt;&lt;ul&gt; &lt;c:for var="direction" list="$&#123;7&#125;"&gt; &lt;li data-directionId=""&gt;电商平台&lt;/li&gt; &lt;/c:for&gt;&lt;/ul&gt;&lt;p class="tips"&gt;功能模板&lt;/p&gt;&lt;ul class="function"&gt; &lt;c:for var="direction" list="$&#123;10&#125;"&gt; &lt;li data-directionId=""&gt;电商平台&lt;/li&gt; &lt;/c:for&gt;&lt;/ul&gt; 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354.info-product &#123; position: relative; width: 692px; ul &#123; overflow: hidden; zoom: 1; list-style: none; margin: 5px 0 30px -18px; padding-bottom: 22px; font-size: 0; border-bottom: solid 1px #e6e6e6; li &#123; position: relative; box-sizing: border-box; display: block; float: left; margin-left: 18px; margin-bottom: 12px; width: 124px; height: 30px; line-height: 30px; border: solid 1px #e6e6e6; text-align: center; text-align-last: center; font-size: 12px; color: #484848; cursor: pointer; &#125; .active &#123; border: solid 1px #027fe5; &amp;::after &#123; content: url('./imgs/icon-active.png'); width: 18px; height: 18px; position: absolute; bottom: 2px; right: 0; &#125; &#125; &#125; ul.function &#123; padding-bottom: 0; border-bottom: none; &#125; .ui &#123; margin-bottom: 30px; padding-bottom: 22px; border-bottom: solid 1px #e6e6e6; label &#123; margin-top: 10px !important; margin-right: 20px !important; &#125; &#125;&#125; 实现效果 总结关键点在于通过给父元素设置margin-left: -18px来消除最左侧的子元素的视觉偏移值，其实是一个很基础的CSS知识点，只怪自己CSS太过薄弱，希望通过不断记录CSS问题解决方案有所提升吧。]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[初识http协议]]></title>
     <url>%2F2018%2F06%2F12%2Fgraphical-http%2F</url>
     <content type="text"></content>
