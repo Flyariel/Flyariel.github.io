@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-14T03:33:26.353Z</updated>
+  <updated>2018-08-29T01:59:33.811Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>移动端H5页面唤起软键盘时遮挡输入框的解决办法</title>
+    <link href="http://yoursite.com/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/"/>
+    <id>http://yoursite.com/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/</id>
+    <published>2018-08-29T01:35:07.000Z</published>
+    <updated>2018-08-29T01:59:33.811Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="本文背景"><a href="#本文背景" class="headerlink" title="本文背景"></a>本文背景</h1><p>日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法</p><h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;本文背景&quot;&gt;&lt;a href=&quot;#本文背景&quot; class=&quot;headerlink&quot; title=&quot;本文背景&quot;&gt;&lt;/a&gt;本文背景&lt;/h1&gt;&lt;p&gt;日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文
+      
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://yoursite.com/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS简单实现子元素两端对齐</title>
