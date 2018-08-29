@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[移动端H5页面唤起软键盘时遮挡输入框的解决办法]]></title>
     <url>%2F2018%2F08%2F29%2FSoft-keyboard-occlusion-input-box-in-Android-H5%2F</url>
-    <content type="text"><![CDATA[本文背景日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法 问题分析]]></content>
+    <content type="text"><![CDATA[问题描述日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法。 问题分析一个简单的付款页面，如下图：因为页面中的付款按钮需要吸底，使用fixed定位达到效果但在手机软键盘唤起时，付款按钮跟随软键盘浮动起来，严重影响了用户体验，也不方便进行输入。要想知道该问题发生的原因，我们首先需要了解下手机设备中的各个高度。参考深入理解高度默认情况下，屏幕的高度=顶部状态栏的高度+webview的高度。如果软键盘打开，则屏幕的高度=顶部状态栏的高度+webview的高度+软键盘的高度,webview的高度（html默认高度）减小，导致该问题的出现。了解了基本知识后，就能找到解决该问题的办法了。 问题处理调整定位方式，增加html高度，如下：1234567.order-content-self &#123; box-sizing: border-box; width: 100%; min-height: 568px; background-color: #ffffff; padding: 20px 0;&#125; 并用js使输入框出现在可视区域内1234567$('input, textarea').on('click', function () &#123; var target = this; setTimeout(function () &#123; target.scrollIntoViewIfNeeded(true); target.scrollIntoView(true); &#125;, 500);&#125;); scrollIntoViewIfNeeded、 scrollIntoView方法:滚动浏览器窗口或容器元素，以便在当前视窗的可见范围看见当前元素。 回顾解决该问题需要重点掌握的知识，是对手机设备中各个高度的理解。了解了高度组成之后，就能清楚的分析出问题原因，从而找到方法解决问题。该问题并非只有本文列出的这种解决办法，相信看官们理解基础知识之后能找到各自解决办法。]]></content>
       <categories>
         <category>CSS</category>
       </categories>

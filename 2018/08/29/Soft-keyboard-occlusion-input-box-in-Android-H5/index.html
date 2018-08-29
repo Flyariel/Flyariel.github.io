@@ -119,18 +119,21 @@
 
 
 
-<meta name="description" content="本文背景日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法 问题分析">
+<meta name="description" content="问题描述日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法。 问题分析一个简单的付款页面，如下图：因为页面中的付款按钮需要吸底，使用fixed定位达到效果">
 <meta name="keywords" content="CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动端H5页面唤起软键盘时遮挡输入框的解决办法">
 <meta property="og:url" content="http://yoursite.com/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
-<meta property="og:description" content="本文背景日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法 问题分析">
+<meta property="og:description" content="问题描述日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法。 问题分析一个简单的付款页面，如下图：因为页面中的付款按钮需要吸底，使用fixed定位达到效果">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-29T01:59:33.811Z">
+<meta property="og:image" content="http://yoursite.com/images/2018-08-29-Soft-keyboard-occlusion-input-box-in-Android-H5/1.jpg">
+<meta property="og:image" content="http://yoursite.com/images/2018-08-29-Soft-keyboard-occlusion-input-box-in-Android-H5/2.jpg">
+<meta property="og:updated_time" content="2018-08-29T06:42:57.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端H5页面唤起软键盘时遮挡输入框的解决办法">
-<meta name="twitter:description" content="本文背景日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法 问题分析">
+<meta name="twitter:description" content="问题描述日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法。 问题分析一个简单的付款页面，如下图：因为页面中的付款按钮需要吸底，使用fixed定位达到效果">
+<meta name="twitter:image" content="http://yoursite.com/images/2018-08-29-Soft-keyboard-occlusion-input-box-in-Android-H5/1.jpg">
 
 
 
@@ -392,8 +395,13 @@
       
 
       
-        <h1 id="本文背景"><a href="#本文背景" class="headerlink" title="本文背景"></a>本文背景</h1><p>日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法</p>
-<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1>
+        <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>日常需求中，经常会遇到H5页面中的输入框获得焦点时，唤起软键盘遮挡输入框的问题，影响用户体验，近期也遇到过该问题，因此以此文记录下自己的解决办法。</p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>一个简单的付款页面，如下图：因为页面中的付款按钮需要吸底，使用fixed定位达到效果<br><a id="more"></a><br><img src="/images/2018-08-29-Soft-keyboard-occlusion-input-box-in-Android-H5/1.jpg" alt="问题复现"><br>但在手机软键盘唤起时，付款按钮跟随软键盘浮动起来，严重影响了用户体验，也不方便进行输入。<br><img src="/images/2018-08-29-Soft-keyboard-occlusion-input-box-in-Android-H5/2.jpg" alt="问题复现"><br>要想知道该问题发生的原因，我们首先需要了解下手机设备中的各个高度。参考<a href="http://ask.dcloud.net.cn/article/205" target="_blank" rel="noopener">深入理解高度</a><br>默认情况下，屏幕的高度=顶部状态栏的高度+webview的高度。如果软键盘打开，则屏幕的高度=顶部状态栏的高度+webview的高度+软键盘的高度,webview的高度（html默认高度）减小，导致该问题的出现。了解了基本知识后，就能找到解决该问题的办法了。</p>
+<h1 id="问题处理"><a href="#问题处理" class="headerlink" title="问题处理"></a>问题处理</h1><p>调整定位方式，增加html高度，如下：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.order-content-self</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">568px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>并用js使输入框出现在可视区域内<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'input, textarea'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> target = <span class="keyword">this</span>;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        target.scrollIntoViewIfNeeded(<span class="literal">true</span>);</span><br><span class="line">        target.scrollIntoView(<span class="literal">true</span>);</span><br><span class="line">    &#125;, <span class="number">500</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><code>scrollIntoViewIfNeeded、 scrollIntoView</code>方法:滚动浏览器窗口或容器元素，以便在当前视窗的可见范围看见当前元素。</p>
+<h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><p>解决该问题需要重点掌握的知识，是对手机设备中各个高度的理解。了解了高度组成之后，就能清楚的分析出问题原因，从而找到方法解决问题。该问题并非只有本文列出的这种解决办法，相信看官们理解基础知识之后能找到各自解决办法。</p>
+
       
     </div>
     
@@ -634,7 +642,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本文背景"><span class="nav-number">1.</span> <span class="nav-text">本文背景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题分析"><span class="nav-number">2.</span> <span class="nav-text">问题分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题分析"><span class="nav-number">2.</span> <span class="nav-text">问题分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题处理"><span class="nav-number">3.</span> <span class="nav-text">问题处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#回顾"><span class="nav-number">4.</span> <span class="nav-text">回顾</span></a></li></ol></div>
             
 
           </div>
