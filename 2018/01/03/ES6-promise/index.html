@@ -45,44 +45,6 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
@@ -112,8 +74,6 @@
 
 
 
-  <link rel="alternate" href="/fasle" title="Ariel's Blog" type="application/atom+xml" />
-
 
 
 
@@ -123,16 +83,16 @@
 <meta name="keywords" content="ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅谈ES6新特性之promise篇">
-<meta property="og:url" content="http://yoursite.com/2018/01/03/ES6-promise/index.html">
+<meta property="og:url" content="https://flyariel.github.io/2018/01/03/ES6-promise/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
 <meta property="og:description" content="JS单线程特性浏览器（或者说JS引擎）执行JS的机制是基于事件循环。 由于JS是单线程，所以同一时间只能执行一个任务，其他任务就得排队，后续任务必须等到前一个任务结束才能开始执行。为了避免因为某些长时间任务造成的无意义等待，JS引入了异步的概念，用另一个线程来管理异步任务。 同步任务直接在主线程队列中顺序执行，而异步任务会进入另一个任务队列，不会阻塞主线程。等到主线程队列空了（执行完了）的时候，就">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/2018-01-03-ES6-promise/promise.png">
+<meta property="og:image" content="https://flyariel.github.io/images/2018-01-03-ES6-promise/promise.png">
 <meta property="og:updated_time" content="2018-04-10T07:09:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈ES6新特性之promise篇">
 <meta name="twitter:description" content="JS单线程特性浏览器（或者说JS引擎）执行JS的机制是基于事件循环。 由于JS是单线程，所以同一时间只能执行一个任务，其他任务就得排队，后续任务必须等到前一个任务结束才能开始执行。为了避免因为某些长时间任务造成的无意义等待，JS引入了异步的概念，用另一个线程来管理异步任务。 同步任务直接在主线程队列中顺序执行，而异步任务会进入另一个任务队列，不会阻塞主线程。等到主线程队列空了（执行完了）的时候，就">
-<meta name="twitter:image" content="http://yoursite.com/images/2018-01-03-ES6-promise/promise.png">
+<meta name="twitter:image" content="https://flyariel.github.io/images/2018-01-03-ES6-promise/promise.png">
 
 
 
@@ -162,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/03/ES6-promise/"/>
+  <link rel="canonical" href="https://flyariel.github.io/2018/01/03/ES6-promise/"/>
 
 
 
@@ -203,7 +163,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">我想在那里最蓝的大海扬帆 , 绝不管自己能不能回还</p>
+        <p class="site-subtitle">我本地没问题啊</p>
       
   </div>
 
@@ -305,12 +265,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/03/ES6-promise/">
+    <link itemprop="mainEntityOfPage" href="https://flyariel.github.io/2018/01/03/ES6-promise/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="image" content="/uploads/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -433,6 +393,12 @@
     
     
 
+    <div>
+      
+        
+      
+    </div>
+
     
 
     
@@ -535,11 +501,11 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
+                src="/uploads/avatar.png"
                 alt="Ariel" />
             
               <p class="site-author-name" itemprop="name">Ariel</p>
-              <p class="site-description motion-element" itemprop="description">沉迷卡农无法自拔</p>
+              <p class="site-description motion-element" itemprop="description">神游在初见的午后</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -580,45 +546,20 @@
           </nav>
 
           
-            <div class="feed-link motion-element">
-              <a href="/fasle" rel="alternate">
-                <i class="fa fa-rss"></i>
-                RSS
-              </a>
-            </div>
-          
 
           
             <div class="links-of-author motion-element">
                 
                   <span class="links-of-author-item">
-                    <a href="https://github.com/Flyariel" target="_blank" title="GitHub">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
                       
                         <i class="fa fa-fw fa-github"></i>GitHub</a>
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="http://weibo.com/2520959220" target="_blank" title="微博">
-                      
-                        <i class="fa fa-fw fa-weibo"></i>微博</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="http://douban.com/people/143523126" target="_blank" title="豆瓣">
-                      
-                        <i class="fa fa-fw fa-leaf"></i>豆瓣</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="http://www.zhihu.com/people/flyariel" target="_blank" title="知乎">
-                      
-                        <i class="fa fa-fw fa-mixcloud"></i>知乎</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
                     <a href="https://segmentfault.com/u/fushuiguiren" target="_blank" title="segmentfault">
                       
-                        <i class="fa fa-fw fa-skype"></i>segmentfault</a>
+                        <i class="fa fa-fw fa-globe"></i>segmentfault</a>
                   </span>
                 
             </div>
@@ -637,19 +578,19 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/v2/guide/" title="Vue" target="_blank">Vue</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://nodejs.cn/api/" title="Node" target="_blank">Node</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="https://stackoverflow.com/" title="stackoverflow" target="_blank">stackoverflow</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://nodejs.cn/api/" title="Node.js" target="_blank">Node.js</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.webpackjs.com/" title="webpack" target="_blank">webpack</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://cn.vuejs.org/" title="Vue.js" target="_blank">Vue.js</a>
+                    <a href="http://fex.baidu.com/weekly/" title="fex | baidu" target="_blank">fex | baidu</a>
                   </li>
                 
               </ul>
@@ -691,13 +632,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Ariel</span>
 
   
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
 </div>
 
 
