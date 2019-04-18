@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://flyariel.github.io/about/index.html</loc>
+    
+    <lastmod>2019-04-18T14:57:41.547Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://flyariel.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/</loc>
     
     <lastmod>2019-01-25T07:31:14.454Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>https://flyariel.github.io/categories/index.html</loc>
     
     <lastmod>2017-05-26T10:36:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://flyariel.github.io/about/index.html</loc>
-    
-    <lastmod>2017-05-21T02:50:33.000Z</lastmod>
     
   </url>
   
