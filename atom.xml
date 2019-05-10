@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://flyariel.github.io/"/>
-  <updated>2019-05-10T04:26:08.449Z</updated>
+  <updated>2019-05-10T04:28:13.265Z</updated>
   <id>https://flyariel.github.io/</id>
   
   <author>
@@ -21,16 +21,26 @@
     <link href="https://flyariel.github.io/2019/04/22/implement%20%20a%20promise/"/>
     <id>https://flyariel.github.io/2019/04/22/implement  a promise/</id>
     <published>2019-04-22T02:53:26.000Z</published>
-    <updated>2019-05-10T04:26:08.449Z</updated>
+    <updated>2019-05-10T04:28:13.265Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>先上废话！最近找工作的历程，让我切切实实感受到了2019年是有多冷，找了一圈朋友内推都被告知锁HC、停招……so，为了提升自己的竞争力，很有必要巩固基础、补习《面试之老被问这些问题烦不烦啊》经书。而这其中最让我厌烦的有两大问题：</p><ul><li>如何实现一个promise</li><li>Vue数据侦听原理</li></ul><p>为了摆脱这两个不厌其烦被问到的问题的束缚，我决定写两篇博客，撸码实现这两个需求，一为加深印象，二为记录成长。废话到此，下面开始正文吧！</p><h1 id="Promise到底是个啥（Promise-A-规范）"><a href="#Promise到底是个啥（Promise-A-规范）" class="headerlink" title="Promise到底是个啥（Promise/A+规范）"></a>Promise到底是个啥（Promise/A+规范）</h1><blockquote><p>Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行的Javascript异步编程解决方案之一</p></blockquote><p>关于Promise规范的介绍，可以参考以下文章</p><ul><li><a href="https://promisesaplus.com/" target="_blank" rel="noopener">Promise/A+规范 - 英文</a></li><li><a href="https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/#note-4" target="_blank" rel="noopener">Promise/A+规范 - 翻译</a></li></ul><h1 id="促使Promise问世的原因"><a href="#促使Promise问世的原因" class="headerlink" title="促使Promise问世的原因"></a>促使Promise问世的原因</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>先上废话！最近找工作的历程，让我切切实实感受到了2019年是有多冷，找了一圈朋友内推都被告知锁HC、停招……so，为了提升自己的竞争力，很有必要巩固基础、补习《面试之老被问这些问题烦不烦啊》经书。而这其中最让我厌烦的有两大问题：</p><ul><li>如何实现一个promise</li><li>Vue数据侦听原理</li></ul><p>为了摆脱这两个不厌其烦被问到的问题的束缚，我决定写两篇博客，撸码实现这两个需求，一为加深印象，二为记录成长。废话到此，下面开始正文吧！</p><h1 id="Promise到底是个啥（Promise-A-规范）"><a href="#Promise到底是个啥（Promise-A-规范）" class="headerlink" title="Promise到底是个啥（Promise/A+规范）"></a>Promise到底是个啥（Promise/A+规范）</h1><blockquote><p>Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行的Javascript异步编程解决方案之一</p></blockquote><p>关于Promise规范的介绍，可以参考以下文章</p><ul><li><a href="https://promisesaplus.com/" target="_blank" rel="noopener">Promise/A+规范 - 英文</a></li><li><a href="https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/#note-4" target="_blank" rel="noopener">Promise/A+规范 - 翻译</a></li></ul><a id="more"></a><h1 id="促使Promise问世的原因"><a href="#促使Promise问世的原因" class="headerlink" title="促使Promise问世的原因"></a>促使Promise问世的原因</h1>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;先上废话！最近找工作的历程，让我切切实实感受到了2019年是有多冷，找了一圈朋友内推都被告知锁HC、停招……so，为了提升自己的竞争力，很有
-      
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;先上废话！最近找工作的历程，让我切切实实感受到了2019年是有多冷，找了一圈朋友内推都被告知锁HC、停招……so，为了提升自己的竞争力，很有必要巩固基础、补习《面试之老被问这些问题烦不烦啊》经书。而这其中最让我厌烦的有两大问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何实现一个promise&lt;/li&gt;
+&lt;li&gt;Vue数据侦听原理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为了摆脱这两个不厌其烦被问到的问题的束缚，我决定写两篇博客，撸码实现这两个需求，一为加深印象，二为记录成长。废话到此，下面开始正文吧！&lt;/p&gt;
+&lt;h1 id=&quot;Promise到底是个啥（Promise-A-规范）&quot;&gt;&lt;a href=&quot;#Promise到底是个啥（Promise-A-规范）&quot; class=&quot;headerlink&quot; title=&quot;Promise到底是个啥（Promise/A+规范）&quot;&gt;&lt;/a&gt;Promise到底是个啥（Promise/A+规范）&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行的Javascript异步编程解决方案之一&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于Promise规范的介绍，可以参考以下文章&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://promisesaplus.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Promise/A+规范 - 英文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/#note-4&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Promise/A+规范 - 翻译&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
