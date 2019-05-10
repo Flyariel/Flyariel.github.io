@@ -4,24 +4,8 @@
 
     
   <url>
-    <loc>https://flyariel.github.io/2019/04/22/implement%20%20a%20promise/</loc>
-    <lastmod>2019-05-10T04:28:13.265Z</lastmod>
-    <data>
-        <display>
-        <title>如何实现一个promise</title>
-        <pubTime>2019-04-22T02:53:26.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
     <loc>https://flyariel.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/</loc>
-    <lastmod>2019-01-25T07:31:14.454Z</lastmod>
+    <lastmod>2019-05-10T04:31:12.088Z</lastmod>
     <data>
         <display>
         <title>Vue+express+MySQL 实现登录校验功能</title>
@@ -38,6 +22,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://flyariel.github.io/2019/04/22/implement%20%20a%20promise/</loc>
+    <lastmod>2019-05-10T04:28:13.265Z</lastmod>
+    <data>
+        <display>
+        <title>如何实现一个promise</title>
+        <pubTime>2019-04-22T02:53:26.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://flyariel.github.io/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/</loc>
