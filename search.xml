@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[如何实现一个promise]]></title>
     <url>%2F2019%2F04%2F22%2Fimplement%20%20a%20promise%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[前言先上废话！最近找工作的历程，让我切切实实感受到了2019年是有多冷，找了一圈朋友内推都被告知锁HC、停招……so，为了提升自己的竞争力，很有必要巩固基础、补习《面试之老被问这些问题烦不烦啊》经书。而这其中最让我厌烦的有两大问题： 如何实现一个promise Vue数据侦听原理 为了摆脱这两个不厌其烦被问到的问题的束缚，我决定写两篇博客，撸码实现这两个需求，一为加深印象，二为记录成长。废话到此，下面开始正文吧！ Promise到底是个啥（Promise/A+规范） Promise是JS异步编程中的重要概念，异步抽象处理对象，是目前比较流行的Javascript异步编程解决方案之一 关于Promise规范的介绍，可以参考以下文章 Promise/A+规范 - 英文 Promise/A+规范 - 翻译 促使Promise问世的原因]]></content>
   </entry>
   <entry>
     <title><![CDATA[Vue+express+MySQL 实现登录校验功能]]></title>
