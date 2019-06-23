@@ -83,33 +83,33 @@
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux学习笔记二：文件与目录管理">
-<meta property="og:url" content="https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/index.html">
+<meta property="og:url" content="https://arielta.github.io/2018/03/29/Linux-file-directory-manage/index.html">
 <meta property="og:site_name" content="Ariel&#39;s Blog">
 <meta property="og:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/pwd.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/mkdir.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/rmdir.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/$PATH.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/cp.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/rm.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/mv.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/basename.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/more.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/head.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/tail.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/od.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/touch.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/which.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/findTime.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/findUser.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/findFileName.png">
-<meta property="og:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/findExec.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/pwd.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/mkdir.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/rmdir.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/$PATH.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/cp.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/rm.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/mv.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/basename.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/more.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/head.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/tail.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/od.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/touch.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/which.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/findTime.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/findUser.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/findFileName.png">
+<meta property="og:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/findExec.png">
 <meta property="og:updated_time" content="2018-04-22T07:07:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记二：文件与目录管理">
 <meta name="twitter:description" content="目录与路径目录的相关操作首先介绍一下比较特殊的目录，需要牢记脑海：    目录 含义     . 代表此层目录   .. 代表上一层目录   - 代表前一个工作目录   ~ 代表【目前用户身份】所在的家目录   ~arieltian 代表 arieltian 这个用户的家目录    需要注意的是：在所有目录底下都会存在.和..两个目录，根目录的上一层..和根目录自己.是同一个目录。然后再了解下几个">
-<meta name="twitter:image" content="https://flyariel.github.io/images/2018-03-29-Linux-file-directory-manage/pwd.png">
+<meta name="twitter:image" content="https://arielta.github.io/images/2018-03-29-Linux-file-directory-manage/pwd.png">
 
 
 
@@ -139,7 +139,7 @@
 
 
 
-  <link rel="canonical" href="https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/"/>
+  <link rel="canonical" href="https://arielta.github.io/2018/03/29/Linux-file-directory-manage/"/>
 
 
 
@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/">
+    <link itemprop="mainEntityOfPage" href="https://arielta.github.io/2018/03/29/Linux-file-directory-manage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ariel">
@@ -928,7 +928,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/" title="Linux学习笔记二：文件与目录管理">https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/</a>
+    <a href="https://arielta.github.io/2018/03/29/Linux-file-directory-manage/" title="Linux学习笔记二：文件与目录管理">https://arielta.github.io/2018/03/29/Linux-file-directory-manage/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>

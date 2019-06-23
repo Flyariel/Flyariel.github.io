@@ -5,9 +5,9 @@
   <subtitle>我本地没问题啊</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://flyariel.github.io/"/>
+  <link href="https://arielta.github.io/"/>
   <updated>2019-05-10T04:28:13.265Z</updated>
-  <id>https://flyariel.github.io/</id>
+  <id>https://arielta.github.io/</id>
   
   <author>
     <name>Ariel</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>如何实现一个promise</title>
-    <link href="https://flyariel.github.io/2019/04/22/implement%20%20a%20promise/"/>
-    <id>https://flyariel.github.io/2019/04/22/implement  a promise/</id>
+    <link href="https://arielta.github.io/2019/04/22/implement%20%20a%20promise/"/>
+    <id>https://arielta.github.io/2019/04/22/implement  a promise/</id>
     <published>2019-04-22T02:53:26.000Z</published>
     <updated>2019-05-10T04:28:13.265Z</updated>
     
@@ -49,8 +49,8 @@
   
   <entry>
     <title>Vue+express+MySQL 实现登录校验功能</title>
-    <link href="https://flyariel.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/"/>
-    <id>https://flyariel.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/</id>
+    <link href="https://arielta.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/"/>
+    <id>https://arielta.github.io/2019/01/25/Vue-express-MySQL-implements-login-verification/</id>
     <published>2019-01-25T03:07:11.000Z</published>
     <updated>2019-05-10T04:31:12.088Z</updated>
     
@@ -68,17 +68,17 @@
     
     </summary>
     
-      <category term="Node" scheme="https://flyariel.github.io/categories/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/categories/Node/"/>
     
     
-      <category term="Node" scheme="https://flyariel.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>移动端H5页面唤起软键盘时遮挡输入框的解决办法</title>
-    <link href="https://flyariel.github.io/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/"/>
-    <id>https://flyariel.github.io/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/</id>
+    <link href="https://arielta.github.io/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/"/>
+    <id>https://arielta.github.io/2018/08/29/Soft-keyboard-occlusion-input-box-in-Android-H5/</id>
     <published>2018-08-29T01:35:07.000Z</published>
     <updated>2018-08-29T06:42:57.805Z</updated>
     
@@ -91,17 +91,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://flyariel.github.io/categories/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://flyariel.github.io/tags/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>CSS简单实现子元素两端对齐</title>
-    <link href="https://flyariel.github.io/2018/06/14/child-element-justified/"/>
-    <id>https://flyariel.github.io/2018/06/14/child-element-justified/</id>
+    <link href="https://arielta.github.io/2018/06/14/child-element-justified/"/>
+    <id>https://arielta.github.io/2018/06/14/child-element-justified/</id>
     <published>2018-06-14T02:45:21.000Z</published>
     <updated>2018-06-14T03:33:26.353Z</updated>
     
@@ -115,17 +115,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://flyariel.github.io/categories/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://flyariel.github.io/tags/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习笔记二：文件与目录管理</title>
-    <link href="https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/"/>
-    <id>https://flyariel.github.io/2018/03/29/Linux-file-directory-manage/</id>
+    <link href="https://arielta.github.io/2018/03/29/Linux-file-directory-manage/"/>
+    <id>https://arielta.github.io/2018/03/29/Linux-file-directory-manage/</id>
     <published>2018-03-29T07:01:58.000Z</published>
     <updated>2018-04-22T07:07:28.000Z</updated>
     
@@ -176,17 +176,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://flyariel.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://flyariel.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Roadmap to becoming a web developer in 2018</title>
-    <link href="https://flyariel.github.io/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/"/>
-    <id>https://flyariel.github.io/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/</id>
+    <link href="https://arielta.github.io/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/"/>
+    <id>https://arielta.github.io/2018/02/27/Roadmap-to-becoming-a-web-developer-in-2018/</id>
     <published>2018-02-27T09:12:06.000Z</published>
     <updated>2018-02-27T09:35:25.089Z</updated>
     
@@ -208,17 +208,17 @@
     
     </summary>
     
-      <category term="前端杂谈" scheme="https://flyariel.github.io/categories/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
+      <category term="前端杂谈" scheme="https://arielta.github.io/categories/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="前端杂谈" scheme="https://flyariel.github.io/tags/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
+      <category term="前端杂谈" scheme="https://arielta.github.io/tags/%E5%89%8D%E7%AB%AF%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>浅析正则表达式</title>
-    <link href="https://flyariel.github.io/2018/02/11/javascript-RegExp/"/>
-    <id>https://flyariel.github.io/2018/02/11/javascript-RegExp/</id>
+    <link href="https://arielta.github.io/2018/02/11/javascript-RegExp/"/>
+    <id>https://arielta.github.io/2018/02/11/javascript-RegExp/</id>
     <published>2018-02-11T07:12:06.000Z</published>
     <updated>2018-04-10T05:51:32.445Z</updated>
     
@@ -306,17 +306,17 @@
     
     </summary>
     
-      <category term="JavaScript" scheme="https://flyariel.github.io/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="https://arielta.github.io/categories/JavaScript/"/>
     
     
-      <category term="JavaScript" scheme="https://flyariel.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://arielta.github.io/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>Node实现文件系统操作：导出Excel</title>
-    <link href="https://flyariel.github.io/2018/02/08/Node-export-excel/"/>
-    <id>https://flyariel.github.io/2018/02/08/Node-export-excel/</id>
+    <link href="https://arielta.github.io/2018/02/08/Node-export-excel/"/>
+    <id>https://arielta.github.io/2018/02/08/Node-export-excel/</id>
     <published>2018-02-08T08:38:34.000Z</published>
     <updated>2018-04-10T05:50:14.237Z</updated>
     
@@ -337,17 +337,17 @@
     
     </summary>
     
-      <category term="Node" scheme="https://flyariel.github.io/categories/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/categories/Node/"/>
     
     
-      <category term="Node" scheme="https://flyariel.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>Linux学习笔记一：文件权限与目录配置</title>
-    <link href="https://flyariel.github.io/2018/01/17/Linux-file-directory-config/"/>
-    <id>https://flyariel.github.io/2018/01/17/Linux-file-directory-config/</id>
+    <link href="https://arielta.github.io/2018/01/17/Linux-file-directory-config/"/>
+    <id>https://arielta.github.io/2018/01/17/Linux-file-directory-config/</id>
     <published>2018-01-17T13:37:47.000Z</published>
     <updated>2018-04-18T14:37:38.000Z</updated>
     
@@ -362,17 +362,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://flyariel.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://flyariel.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>CSS+图片简单实现五角星推荐指数</title>
-    <link href="https://flyariel.github.io/2018/01/10/css-pentagram/"/>
-    <id>https://flyariel.github.io/2018/01/10/css-pentagram/</id>
+    <link href="https://arielta.github.io/2018/01/10/css-pentagram/"/>
+    <id>https://arielta.github.io/2018/01/10/css-pentagram/</id>
     <published>2018-01-10T12:26:38.000Z</published>
     <updated>2018-04-10T06:22:32.408Z</updated>
     
@@ -386,17 +386,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="https://flyariel.github.io/categories/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="https://flyariel.github.io/tags/CSS/"/>
+      <category term="CSS" scheme="https://arielta.github.io/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>基于NodeJs防御csrf攻击</title>
-    <link href="https://flyariel.github.io/2018/01/04/NodeJs-csrf/"/>
-    <id>https://flyariel.github.io/2018/01/04/NodeJs-csrf/</id>
+    <link href="https://arielta.github.io/2018/01/04/NodeJs-csrf/"/>
+    <id>https://arielta.github.io/2018/01/04/NodeJs-csrf/</id>
     <published>2018-01-04T13:32:40.000Z</published>
     <updated>2018-04-10T05:46:34.609Z</updated>
     
@@ -418,17 +418,17 @@
     
     </summary>
     
-      <category term="Node" scheme="https://flyariel.github.io/categories/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/categories/Node/"/>
     
     
-      <category term="Node" scheme="https://flyariel.github.io/tags/Node/"/>
+      <category term="Node" scheme="https://arielta.github.io/tags/Node/"/>
     
   </entry>
   
   <entry>
     <title>浅谈ES6新特性之promise篇</title>
-    <link href="https://flyariel.github.io/2018/01/03/ES6-promise/"/>
-    <id>https://flyariel.github.io/2018/01/03/ES6-promise/</id>
+    <link href="https://arielta.github.io/2018/01/03/ES6-promise/"/>
+    <id>https://arielta.github.io/2018/01/03/ES6-promise/</id>
     <published>2018-01-03T14:03:30.000Z</published>
     <updated>2018-04-10T07:09:02.000Z</updated>
     
@@ -445,17 +445,17 @@
     
     </summary>
     
-      <category term="ES6" scheme="https://flyariel.github.io/categories/ES6/"/>
+      <category term="ES6" scheme="https://arielta.github.io/categories/ES6/"/>
     
     
-      <category term="ES6" scheme="https://flyariel.github.io/tags/ES6/"/>
+      <category term="ES6" scheme="https://arielta.github.io/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>Vue学习笔记之父子组件通信</title>
-    <link href="https://flyariel.github.io/2017/12/27/Vue-component-communication/"/>
-    <id>https://flyariel.github.io/2017/12/27/Vue-component-communication/</id>
+    <link href="https://arielta.github.io/2017/12/27/Vue-component-communication/"/>
+    <id>https://arielta.github.io/2017/12/27/Vue-component-communication/</id>
     <published>2017-12-27T13:29:29.000Z</published>
     <updated>2018-04-10T06:21:42.907Z</updated>
     
@@ -468,17 +468,17 @@
     
     </summary>
     
-      <category term="Vue" scheme="https://flyariel.github.io/categories/Vue/"/>
+      <category term="Vue" scheme="https://arielta.github.io/categories/Vue/"/>
     
     
-      <category term="Vue" scheme="https://flyariel.github.io/tags/Vue/"/>
+      <category term="Vue" scheme="https://arielta.github.io/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>webpack部署过程中遇到的问题</title>
-    <link href="https://flyariel.github.io/2017/12/05/webpack-config/"/>
-    <id>https://flyariel.github.io/2017/12/05/webpack-config/</id>
+    <link href="https://arielta.github.io/2017/12/05/webpack-config/"/>
+    <id>https://arielta.github.io/2017/12/05/webpack-config/</id>
     <published>2017-12-05T09:39:11.000Z</published>
     <updated>2018-04-10T06:20:58.000Z</updated>
     
@@ -490,17 +490,17 @@
     
     </summary>
     
-      <category term="webpack" scheme="https://flyariel.github.io/categories/webpack/"/>
+      <category term="webpack" scheme="https://arielta.github.io/categories/webpack/"/>
     
     
-      <category term="webpack" scheme="https://flyariel.github.io/tags/webpack/"/>
+      <category term="webpack" scheme="https://arielta.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title>MacOS 下配置Apache本地域名服务器</title>
-    <link href="https://flyariel.github.io/2017/12/01/MacOS-Apache/"/>
-    <id>https://flyariel.github.io/2017/12/01/MacOS-Apache/</id>
+    <link href="https://arielta.github.io/2017/12/01/MacOS-Apache/"/>
+    <id>https://arielta.github.io/2017/12/01/MacOS-Apache/</id>
     <published>2017-12-01T03:17:29.000Z</published>
     <updated>2018-04-10T06:20:35.000Z</updated>
     
@@ -513,17 +513,17 @@
     
     </summary>
     
-      <category term="服务器" scheme="https://flyariel.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+      <category term="服务器" scheme="https://arielta.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="Apache" scheme="https://flyariel.github.io/tags/Apache/"/>
+      <category term="Apache" scheme="https://arielta.github.io/tags/Apache/"/>
     
   </entry>
   
   <entry>
     <title>线上问题日志定位手段</title>
-    <link href="https://flyariel.github.io/2017/11/30/online-problem-logs/"/>
-    <id>https://flyariel.github.io/2017/11/30/online-problem-logs/</id>
+    <link href="https://arielta.github.io/2017/11/30/online-problem-logs/"/>
+    <id>https://arielta.github.io/2017/11/30/online-problem-logs/</id>
     <published>2017-11-30T03:50:30.000Z</published>
     <updated>2018-04-10T06:31:37.000Z</updated>
     
@@ -538,17 +538,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://flyariel.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://flyariel.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Linux下查找包含指定内容的文件</title>
-    <link href="https://flyariel.github.io/2017/11/30/Linux-find/"/>
-    <id>https://flyariel.github.io/2017/11/30/Linux-find/</id>
+    <link href="https://arielta.github.io/2017/11/30/Linux-find/"/>
+    <id>https://arielta.github.io/2017/11/30/Linux-find/</id>
     <published>2017-11-29T16:00:00.000Z</published>
     <updated>2018-04-22T06:24:02.000Z</updated>
     
@@ -561,10 +561,10 @@
     
     </summary>
     
-      <category term="Linux" scheme="https://flyariel.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://flyariel.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://arielta.github.io/tags/Linux/"/>
     
   </entry>
   
